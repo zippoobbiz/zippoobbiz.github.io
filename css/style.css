@@ -275,13 +275,13 @@ code {
   display: block;
   padding: 10px 0;
   width: 235px;
-  height: 60px;
+  height: 55px;
   background-image: url("images/logo.png");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 235px 60px;
-  -moz-background-size: 235px 60px;
-  background-size: 235px 60px;
+  -webkit-background-size: 235px 55px;
+  -moz-background-size: 235px 55px;
+  background-size: 235px 55px;
 }
 .main-body {
   margin-top: -60px;
@@ -378,7 +378,7 @@ code {
 #header-title .subtitle {
   font-size: 16px;
   font-style: italic;
-  line-height: 70px;
+  line-height: 65px;
   color: rgba(255,255,255,0.7);
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
@@ -1656,10 +1656,10 @@ a.article-title:hover {
 }
 #footer .logo {
   width: 188px;
-  height: 48px;
-  -webkit-background-size: 188px 48px;
-  -moz-background-size: 188px 48px;
-  background-size: 188px 48px;
+  height: 44px;
+  -webkit-background-size: 188px 44px;
+  -moz-background-size: 188px 44px;
+  background-size: 188px 44px;
 }
 i.icon {
   display: inline-block;
