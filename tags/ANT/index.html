@@ -3,25 +3,16 @@
 <head>
     <meta charset="utf-8">
     
-    <title>MySQL bottleneck analysis | Welcome to Phil&#39;s</title>
+    <title>Etiqueta: ANT | Welcome to Phil&#39;s</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="SQL" />
-    
-    <meta name="description" content="Find bottleneck IOPS Input/output operations per second (IOPS, pronounced eye-ops) is a performance measurement used to characterize computer storage devices like hard disk drives (HDD), solid state d">
-<meta name="keywords" content="SQL">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL bottleneck analysis">
-<meta property="og:url" content="http://yoursite.com/2016/11/14/MySQL-bottleneck-analysis/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Welcome to Phil&#39;s">
+<meta property="og:url" content="http://yoursite.com/tags/ANT/index.html">
 <meta property="og:site_name" content="Welcome to Phil&#39;s">
-<meta property="og:description" content="Find bottleneck IOPS Input/output operations per second (IOPS, pronounced eye-ops) is a performance measurement used to characterize computer storage devices like hard disk drives (HDD), solid state d">
-<meta property="og:image" content="http://og2api1gp.bkt.clouddn.com/static/images/bottleneck.png">
-<meta property="og:updated_time" content="2018-03-27T05:33:55.024Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL bottleneck analysis">
-<meta name="twitter:description" content="Find bottleneck IOPS Input/output operations per second (IOPS, pronounced eye-ops) is a performance measurement used to characterize computer storage devices like hard disk drives (HDD), solid state d">
-<meta name="twitter:image" content="http://og2api1gp.bkt.clouddn.com/static/images/bottleneck.png">
+<meta name="twitter:title" content="Welcome to Phil&#39;s">
     
 
     
@@ -130,139 +121,74 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    <i class="icon fa fa-tag"></i>Etiqueta: <em>ANT</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-MySQL-bottleneck-analysis" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            
+            </div>
+            <div class="date"><time datetime="2016-12-03T05:47:06.000Z" itemprop="datePublished">2016-12-03</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        MySQL bottleneck analysis
+        <a href="/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/">Another neat tool -- automate your build process using Java and Ant</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2016/11/14/MySQL-bottleneck-analysis/" class="article-date">
-            <time datetime="2016-11-14T05:29:35.000Z" itemprop="datePublished">2016-11-14</time>
-        </a>
-    </div>
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/SQL/">SQL</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <h1 id="Find-bottleneck"><a href="#Find-bottleneck" class="headerlink" title="Find bottleneck"></a>Find bottleneck</h1><p><img src="http://og2api1gp.bkt.clouddn.com/static/images/bottleneck.png" alt="Alt text" title="Optional title"></p>
-<h3 id="IOPS"><a href="#IOPS" class="headerlink" title="IOPS"></a>IOPS</h3><blockquote>
-<p>Input/output operations per second (IOPS, pronounced eye-ops) is a performance measurement used to characterize computer storage devices like hard disk drives (HDD), solid state drives (SSD), and storage area networks (SAN). – Wikipedia’</p>
-</blockquote>
-<h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>Any system that involves with storage has IO bottleneck. Databases are just some data files, so interacting with a database is an IO operation.</p>
-<p>There are two situations when we are using MySQL, OLTP and OLAP. They is a difference regarding the aspect of using MySQL.</p>
-<p>OLTP: On-line <em>Transaction</em> Processing, business, focus on concurrency.<br>OLAP: On-line <em>Analytical</em> Processing, log and data warehousing, focus on throughput.</p>
-<p>There will be an option when you install MySQL on Windows.</p>
-<p><img src="http://og2api1gp.bkt.clouddn.com/static/images/sqloption.png" alt="Alt text" title="Optional title"></p>
-<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><p>Be careful when using <em>order </em> and <em>group by</em>, since both of them consume computing resources, which means more CPU usage.</p>
-<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><p>In a distributed environment, each node between databases is more likely to become a bottleneck.</p>
-<h1 id="When-bottleneck-detected"><a href="#When-bottleneck-detected" class="headerlink" title="When bottleneck detected"></a>When bottleneck detected</h1><p>1) Hardware, OS, Network</p>
-<ul>
-<li>IO ( add more memory; improve IO performance)</li>
-<li>CPU (Multi-core)</li>
-<li>Network (MPLS）</li>
-</ul>
-
-        </div>
-        <footer class="article-footer">
+        <p class="article-excerpt">
             
-
-
-
-    <a data-url="http://yoursite.com/2016/11/14/MySQL-bottleneck-analysis/" data-id="cjf991fvh0008ipw8geg1h52m" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. The main known usage of Ant 
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
 
 
                         </div>
@@ -323,29 +249,6 @@
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/12/03/Useful-commands-that-are-built-in-the-Ant-distribution/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
-        <p class="article-nav-title">
-        
-            Useful commands that are built in the Ant distribution
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2016/11/13/JasperReport/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">JasperReport</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -539,13 +442,11 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2016/11/14/MySQL-bottleneck-analysis/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
