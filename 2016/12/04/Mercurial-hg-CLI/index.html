@@ -3,16 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Arxiu | Welcome to Phil&#39;s</title>
+    <title>Mercurial hg CLI | Welcome to Phil&#39;s</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to Phil&#39;s">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+        <meta name="keywords" content="Version Control" />
+    
+    <meta name="description" content="Synopsis1hg command [option]... [argument]... addadd the specified files on the next commit:1hg add [OPTION]… [FILE]… addremoveadd all new files, delete all missing files: 1hg addremove [OPTION]... [F">
+<meta name="keywords" content="Version Control">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mercurial hg CLI">
+<meta property="og:url" content="http://yoursite.com/2016/12/04/Mercurial-hg-CLI/index.html">
 <meta property="og:site_name" content="Welcome to Phil&#39;s">
+<meta property="og:description" content="Synopsis1hg command [option]... [argument]... addadd the specified files on the next commit:1hg add [OPTION]… [FILE]… addremoveadd all new files, delete all missing files: 1hg addremove [OPTION]... [F">
+<meta property="og:updated_time" content="2018-03-27T06:00:40.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to Phil&#39;s">
+<meta name="twitter:title" content="Mercurial hg CLI">
+<meta name="twitter:description" content="Synopsis1hg command [option]... [argument]... addadd the specified files on the next commit:1hg add [OPTION]… [FILE]… addremoveadd all new files, delete all missing files: 1hg addremove [OPTION]... [F">
     
 
     
@@ -121,507 +128,156 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Arxiu
+    Sense categoria
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Mercurial-hg-CLI" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/12/04/Mercurial-hg-CLI/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/12/04/Mercurial-hg-CLI/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-12-04T05:57:39.000Z" itemprop="datePublished">2016-12-04</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/12/04/Mercurial-hg-CLI/">Mercurial hg CLI</a>
+        Mercurial hg CLI
         </h1>
     
 
-        <p class="article-excerpt">
-            Synopsis1hg command [option]... [argument]...
-addadd the specified files on the next commit:1hg add [OPTION]… [FILE]…
-addremoveadd all new files, delete all missing files:
-1hg addremove [OPTION]... [F
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/12/04/Mercurial-hg-CLI/" class="article-date">
+            <time datetime="2016-12-04T05:57:39.000Z" itemprop="datePublished">2016-12-04</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Version-Control/">Version Control</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="Synopsis"><a href="#Synopsis" class="headerlink" title="Synopsis"></a>Synopsis</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg command [option]... [argument]...</span><br></pre></td></tr></table></figure>
+<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>add the specified files on the next commit:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg add [OPTION]… [FILE]…</span><br></pre></td></tr></table></figure></p>
+<h2 id="addremove"><a href="#addremove" class="headerlink" title="addremove"></a>addremove</h2><p>add all new files, delete all missing files:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg addremove [OPTION]... [FILE]...</span><br></pre></td></tr></table></figure>
+<p>Add all new files and remove all missing files from the repository.</p>
+<h2 id="annotate"><a href="#annotate" class="headerlink" title="annotate"></a>annotate</h2><p>show changeset information by line for each file:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg annotate [-r REV] [-f] [-a] [-u] [-d] [-n] [-c] [-l] FILE...</span><br></pre></td></tr></table></figure></p>
+<p>List changes in files, showing the revision id responsible for each line.</p>
+<h2 id="archive"><a href="#archive" class="headerlink" title="archive"></a>archive</h2><p>create an unversioned archive of a repository revision:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg archive [OPTION]... DEST</span><br></pre></td></tr></table></figure>
+<p>By default, the revision used is the parent of the working directory; use -r/–rev to specify a different revision.</p>
+<h2 id="backout"><a href="#backout" class="headerlink" title="backout"></a>backout</h2><p>reverse effect of earlier changeset:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg backout [OPTION]... [-r] REV</span><br></pre></td></tr></table></figure></p>
+<p>Prepare a new changeset with the effect of REV undone in the current working directory. If no conflicts were encountered, it will be committed immediately.</p>
+<h2 id="branches"><a href="#branches" class="headerlink" title="branches"></a>branches</h2><p>list repository named branches:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg branches [-c]</span><br></pre></td></tr></table></figure>
+<p>List the repository’s named branches, indicating which ones are inactive. If -c/–closed is specified, also list branches which have been marked closed</p>
+<h2 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h2><p>output the current or given revision of files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg cat [OPTION]... FILE...</span><br></pre></td></tr></table></figure></p>
+<p>Print the specified files as they were at the given revision. If no revision is given, the parent of the working directory is used.</p>
+<h2 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h2><p>make a copy of an existing repository:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg clone [OPTION]... SOURCE [DEST]</span><br></pre></td></tr></table></figure>
+<p>Create a copy of an existing repository in a new directory.</p>
+<h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><p>commit the specified files or all outstanding changes:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg commit [OPTION]... [FILE]...</span><br></pre></td></tr></table></figure>
+<p>Commit changes to the given files into the repository. Unlike a centralized SCM, this operation is a local operation.</p>
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p>show combined config settings from all hgrc files:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg config [-u] [NAME]...</span><br></pre></td></tr></table></figure></p>
+<p>With no arguments, print names and values of all config items.<br>With one argument of the form section.name, print just the value of that config item.<br>With multiple arguments, print names and values of all config items with matching section names.</p>
+<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><p>mark files as copied for the next commit:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg copy [OPTION]... [SOURCE]... DEST</span><br></pre></td></tr></table></figure>
+<p>Mark dest as having copies of source files. If dest is a directory, copies are put in that directory. If dest is a file, the source must be a single file.</p>
+<h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>diff repository (or selected files):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg diff [OPTION]... ([-c REV] | [-r REV1 [-r REV2]]) [FILE]...</span><br></pre></td></tr></table></figure>
+<p>Show differences between revisions for the specified files.<br>Differences between files are shown using the unified diff format.</p>
+<h2 id="export"><a href="#export" class="headerlink" title="export"></a>export</h2><p>dump the header and diffs for one or more changesets:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hg export [OPTION]... [-o OUTFILESPEC] [-r] [REV]...</span><br></pre></td></tr></table></figure>
+<p>Print the changeset header and diffs for one or more revisions. If no revision is given, the parent of the working directory is used.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2016/12/04/Mercurial-hg-CLI/" data-id="cjf996e0p0008k6w8xjlwondr" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-12-03T05:47:06.000Z" itemprop="datePublished">2016-12-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/">Another neat tool -- automate your build process using Java and Ant</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. The main known usage of Ant 
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/12/03/Useful-commands-that-are-built-in-the-Ant-distribution/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/12/03/Useful-commands-that-are-built-in-the-Ant-distribution/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-12-03T05:38:03.000Z" itemprop="datePublished">2016-12-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/12/03/Useful-commands-that-are-built-in-the-Ant-distribution/">Useful commands that are built in the Ant distribution</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Here are some commands
-
-
-Command
-Description
-
-
-
-
-Ant
-Used to execute another ant process from within the current one.
-
-
-Cotydir
-Used to copy an entire directory.
-
-
-Copyfile
-Used to copy a single file.
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/11/14/MySQL-bottleneck-analysis/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/static/images/bottleneck.png)" alt="MySQL bottleneck analysis" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/11/14/MySQL-bottleneck-analysis/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-11-14T05:29:35.000Z" itemprop="datePublished">2016-11-14</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/11/14/MySQL-bottleneck-analysis/">MySQL bottleneck analysis</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Find bottleneck
-IOPS
-Input/output operations per second (IOPS, pronounced eye-ops) is a performance measurement used to characterize computer storage devices like hard disk drives (HDD), solid state d
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/11/13/JasperReport/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/static/images/jasper.jpg)" alt="JasperReport" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/11/13/JasperReport/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-11-13T05:20:05.000Z" itemprop="datePublished">2016-11-13</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/11/13/JasperReport/">JasperReport</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-JasperReports is an open source Java reporting tool that can write to a variety of targets, such as: screen, a printer, into PDF, HTML, Microsoft Excel, RTF, ODT, Comma-separated values or XML files.
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/11/03/Improve-SQL-Query-Performance/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/static/images/mysql.png)" alt="Improve SQL Query Performance" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/11/03/Improve-SQL-Query-Performance/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-11-03T05:34:46.000Z" itemprop="datePublished">2016-11-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/11/03/Improve-SQL-Query-Performance/">Improve SQL Query Performance</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-In general computer system, hard-drive read operations are about ten times more than write operation and in most cases, there are no performance issues with insert operation. The problems and bottlen
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/10/13/Java-Cache-System/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/static/images/jcs.jpg)" alt="Java Cache System" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/10/13/Java-Cache-System/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2016-10-13T05:24:59.000Z" itemprop="datePublished">2016-10-13</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/10/13/Java-Cache-System/">Java Cache System</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-JCS is a distributed caching system written in Java. It is intended to speed up applications by providing a means to manage cached data of various dynamic natures. Like any caching system, JCS is mos
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-        
-            </div></section>
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2015/10/04/Markdown-all-you-need-to-know/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/static/images/markdown.jpg)" alt="Markdown all you need to know" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2015/10/04/Markdown-all-you-need-to-know/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2015-10-04T04:58:22.000Z" itemprop="datePublished">2015-10-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2015/10/04/Markdown-all-you-need-to-know/">Markdown all you need to know</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Here are lists of some of the most common use of Markdown.
-Headers123456# H1## H2### H3#### H4##### H5###### H6
-H1H2H3H4H5H6Underline1--- three or more than three hyphens
-
-Superlink12345[linke name th
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-        
-            </div></section>
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2013" class="archive-year"><i class="icon fa fa-calendar-o"></i>2013</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2013/09/04/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2013/09/04/hello-world/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2013-09-04T02:58:22.000Z" itemprop="datePublished">2013-09-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2013/09/04/hello-world/">Hello World</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </p>
-    </div>
-</article>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -682,6 +338,19 @@ Quick
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/12/03/Another-neat-tool-automate-your-build-process-using-Java-and-Ant/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">Another neat tool -- automate your build process using Java and Ant</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -875,11 +544,13 @@ Quick
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2016/12/04/Mercurial-hg-CLI/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
