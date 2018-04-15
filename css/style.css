@@ -230,7 +230,7 @@ body,
 }
 body {
   background: #eaeaea;
-  font: 14px monospace;
+  font: 14px "Lucida Console", Monaco, monospace;
   -webkit-text-size-adjust: 100%;
 }
 code {
