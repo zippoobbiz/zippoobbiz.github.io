@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Dockerfile reference | Welcome to Phil&#39;s</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Docker" />
+    
+    <meta name="description" content="Use Dockerfike create you own docker image. DockerFile contains  basic image info mainainer info image CMD container CMD  1234567891011121314#第一行必须指令基于的基础镜像From ubutu#维护者信息MAINTAINER docker_user  doc">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dockerfile reference">
+<meta property="og:url" content="http://www.philsblog.info/2017/09/16/Dockerfile-reference.html">
+<meta property="og:site_name" content="Welcome to Phil&#39;s">
+<meta property="og:description" content="Use Dockerfike create you own docker image. DockerFile contains  basic image info mainainer info image CMD container CMD  1234567891011121314#第一行必须指令基于的基础镜像From ubutu#维护者信息MAINTAINER docker_user  doc">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://og2api1gp.bkt.clouddn.com/images/docker.png">
+<meta property="og:updated_time" content="2018-04-15T14:50:14.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dockerfile reference">
+<meta name="twitter:description" content="Use Dockerfike create you own docker image. DockerFile contains  basic image info mainainer info image CMD container CMD  1234567891011121314#第一行必须指令基于的基础镜像From ubutu#维护者信息MAINTAINER docker_user  doc">
+<meta name="twitter:image" content="http://og2api1gp.bkt.clouddn.com/images/docker.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Welcome to Phil&#39;s" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-86825116-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8071091076380273",
+    enable_page_level_ads: true
+  });
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Welcome</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/Sort/">Sort</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech/">Tech</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech/Linux/">Linux</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tech/SQL/">SQL</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/">Tools</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/ANT/">ANT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Docker/">Docker</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Version-Control/">Version Control</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/">Work history</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Tools/">Tools</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Tools/Docker/">Docker</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Dockerfile-reference" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Dockerfile reference
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/16/Dockerfile-reference.html" class="article-date">
+            <time datetime="2017-09-15T23:26:28.000Z" itemprop="datePublished">2017-09-16</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Docker/">Docker</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <img src="http://og2api1gp.bkt.clouddn.com/images/docker.png">
+<p>Use Dockerfike create you own docker image.</p>
+<p>DockerFile contains</p>
+<ul>
+<li>basic image info</li>
+<li>mainainer info</li>
+<li>image CMD</li>
+<li>container CMD</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#第一行必须指令基于的基础镜像</span><br><span class="line">From ubutu</span><br><span class="line"></span><br><span class="line">#维护者信息</span><br><span class="line">MAINTAINER docker_user  docker_user@mail.com</span><br><span class="line"></span><br><span class="line">#镜像的操作指令</span><br><span class="line">apt/sourcelist.list</span><br><span class="line"></span><br><span class="line">RUN apt-get update &amp;&amp; apt-get install -y ngnix </span><br><span class="line">RUN echo &quot;\ndaemon off;&quot;&gt;&gt;/etc/ngnix/nignix.conf</span><br><span class="line"></span><br><span class="line">#容器启动时执行指令</span><br><span class="line">CMD /usr/sbin/ngnix</span><br></pre></td></tr></table></figure>
+<p>1、From指令<br>From 或者From :</p>
+<p>DockerFile第一条必须为From指令。如果同一个DockerFile创建多个镜像时，可使用多个From指令（每个镜像一次）</p>
+<p>2、MAINTAINER<br>格式为maintainer ，指定维护者的信息</p>
+<p>3、RUN<br>格式为Run 或者Run [“executable” ,”Param1”, “param2”]<br>前者在shell终端上运行，即/bin/sh -C，后者使用exec运行。例如：RUN [“/bin/bash”, “-c”,”echo hello”]<br>每条run指令在当前基础镜像执行，并且提交新镜像。当命令比较长时，可以使用“/”换行。</p>
+<p>4、CMD指令<br>支持三种格式：<br>CMD [“executable” ,”Param1”, “param2”]使用exec执行，推荐<br>CMD command param1 param2，在/bin/sh上执行<br>CMD [“Param1”, “param2”] 提供给ENTRYPOINT做默认参数。</p>
+<p>每个容器只能执行一条CMD命令，多个CMD命令时，只最后一条被执行。</p>
+<p>5、EXPOSE</p>
+<p>格式为 EXPOSE […] 。</p>
+<p>告诉Docker服务端容器暴露的端口号，供互联系统使用。在启动Docker时，可以通过-P,主机会自动分配一个端口号转发到指定的端口。使用-P，则可以具体指定哪个本地端口映射过来</p>
+<p>例如：<br>EXPOSE 22 80 8443</p>
+<p>6、ENV</p>
+<p>格式为 ENV 。 指定一个环境变量，会被后续 RUN 指令使用，并在容器运行时保持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ENV PG_MAJOR 9.3</span><br><span class="line">ENV PG_VERSION 9.3.4</span><br><span class="line">RUN curl -SL http://example.com/postgres-$PG_VERSION.tar.xz | tar -xJC /usr/src/postgress &amp;&amp; …</span><br><span class="line">ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>7、ADD<br>格式为 ADD 。</p>
+<p>该命令将复制指定的 到容器中的 。 其中 可以是Dockerfile所在目录的一个相对路径；也可以是一个URL；还可以是一个tar文件（自动解压为目录）。则。</p>
+<p>8、COPY</p>
+<p>格式为 COPY 。</p>
+<p>复制本地主机的 （为Dockerfile所在目录的相对路径）到容器中的 。</p>
+<p>当使用本地目录为源目录时，推荐使用 COPY 。</p>
+<p>9、ENTRYPOINT</p>
+<p>两种格式：</p>
+<p>ENTRYPOINT [“executable”, “param1”, “param2”]<br>ENTRYPOINT command param1 param2 （shell中执行）。<br>配置容器启动后执行的命令，并且不可被 docker run 提供的参数覆盖。</p>
+<p>每个Dockerfile中只能有一个 ENTRYPOINT ，当指定多个时，只有最后一个起效。</p>
+<p>10、VOLUME</p>
+<p>格式为 VOLUME [“/data”] 。</p>
+<p>创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。</p>
+<p>11、USER</p>
+<p>格式为 USER daemon 。</p>
+<p>指定运行容器时的用户名或UID，后续的 RUN 也会使用指定用户。</p>
+<p>当服务不需要管理员权限时，可以通过该命令指定运行用户。并且可以在之前创建所需要的用户，例如： RUN groupadd -r postgres &amp;&amp; useradd -r -g postgres postgres 。要临时获取管理员权限可以使用 gosu ，而不推荐 sudo 。</p>
+<p>12、WORKDIR</p>
+<p>格式为 WORKDIR /path/to/workdir 。</p>
+<p>为后续的 RUN 、 CMD 、 ENTRYPOINT 指令配置工作目录。</p>
+<p>可以使用多个 WORKDIR 指令，后续命令如果参数是相对路径，则会基于之前命令指定的路径。例如</p>
+<p>WORKDIR /a<br>WORKDIR b<br>WORKDIR c<br>RUN pwd<br>则最终路径为 /a/b/c 。</p>
+<p>13、ONBUILD</p>
+<p>格式为 ONBUILD [INSTRUCTION] 。</p>
+<p>配置当所创建的镜像作为其它新创建镜像的基础镜像时，所执行的操作指令。</p>
+<p>例如，Dockerfile使用如下的内容创建了镜像 image-A 。</p>
+<p>[…]<br>ONBUILD ADD . /app/src<br>ONBUILD RUN /usr/local/bin/python-build –dir /app/src<br>[…]<br>如果基于A创建新的镜像时，新的Dockerfile中使用 FROM image-A 指定基础镜像时，会自动执行 ONBUILD 指令内容，等价于在后面添加了两条指令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FROM image-A</span><br><span class="line"></span><br><span class="line">#Automatically run the following</span><br><span class="line">ADD . /app/src</span><br><span class="line">RUN /usr/local/bin/python-build --dir /app/src</span><br><span class="line">使用 ONBUILD 指令的镜像，推荐在标签中注明，例如 ruby:1.9-onbuild 。</span><br></pre></td></tr></table></figure></p>
+<p>三、创建镜像<br>通过Docker Build 创建镜像。<br>命令读取指定路径下（包括子目录）所有的Dockefile，并且把目录下所有内容发送到服务端，由服务端创建镜像。另外可以通过创建.dockerignore文件（每一行添加一个匹配模式）让docker忽略指定目录或者文件</p>
+<p>格式为Docker Build [选项] 路径<br>需要制定标签信息，可以使用-t选项<br>例如：Dockerfile路径为 /tmp/docker_build/，生成镜像的标签为build_repo/my_images<br>$dudo docker build -t build_repo/my_images /tmp/docker_build/</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/XiaoduoX" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100009174081848" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/115666960470777778382" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/zippoobbiz" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/phillip-xu/" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/08/16/Big-O-Cheat-sheets.html" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Big O Cheat sheets</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/09/16/Dockerfile-reference.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/images/docker.png)" alt="Dockerfile reference" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tools/">Tools</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Tools/Docker/">Docker</a></p>
+                            <p class="item-title"><a href="/2017/09/16/Dockerfile-reference.html" class="title">Dockerfile reference</a></p>
+                            <p class="item-date"><time datetime="2017-09-15T23:26:28.000Z" itemprop="datePublished">2017-09-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/08/16/Big-O-Cheat-sheets.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/images/bigOComplexity.jpg)" alt="Big O Cheat sheets" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Sort/">Sort</a></p>
+                            <p class="item-title"><a href="/2017/08/16/Big-O-Cheat-sheets.html" class="title">Big O Cheat sheets</a></p>
+                            <p class="item-date"><time datetime="2017-08-15T14:15:43.000Z" itemprop="datePublished">2017-08-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/07/15/Linux-Configuration-Files.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/images/config.jpg)" alt="Linux Configuration Files" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/07/15/Linux-Configuration-Files.html" class="title">Linux Configuration Files</a></p>
+                            <p class="item-date"><time datetime="2017-07-15T03:53:56.000Z" itemprop="datePublished">2017-07-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/06/15/JVM-parameters.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/images/jvm.png)" alt="JVM parameters" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tech/">Tech</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Tech/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2017/06/15/JVM-parameters.html" class="title">JVM parameters</a></p>
+                            <p class="item-date"><time datetime="2017-06-15T13:35:19.000Z" itemprop="datePublished">2017-06-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/06/15/An-A-Z-Index-of-the-Bash-command-line-for-Linux.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://og2api1gp.bkt.clouddn.com/images/linux_terminal_tw.png)" alt="An A-Z Index of the Bash command line for Linux" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tech/">Tech</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Tech/Linux/">Linux</a></p>
+                            <p class="item-title"><a href="/2017/06/15/An-A-Z-Index-of-the-Bash-command-line-for-Linux.html" class="title">An A-Z Index of the Bash command line for Linux</a></p>
+                            <p class="item-date"><time datetime="2017-06-15T12:16:10.000Z" itemprop="datePublished">2017-06-15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/Sort/">Sort</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/">Tech</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/Java/">Java</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/SQL/">SQL</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/ANT/">ANT</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Docker/">Docker</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Version-Control/">Version Control</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/">Work history</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANT/">ANT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CLI/">CLI</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/">Sort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TOOLS/">TOOLS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Version-Control/">Version Control</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-history/">Work history</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-O/">big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hg/">hg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ANT/" style="font-size: 12.5px;">ANT</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/CLI/" style="font-size: 20px;">CLI</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Java/" style="font-size: 17.5px;">Java</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/SQL/" style="font-size: 12.5px;">SQL</a> <a href="/tags/Sort/" style="font-size: 10px;">Sort</a> <a href="/tags/TOOLS/" style="font-size: 10px;">TOOLS</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/Tools/" style="font-size: 12.5px;">Tools</a> <a href="/tags/Version-Control/" style="font-size: 15px;">Version Control</a> <a href="/tags/Work-history/" style="font-size: 15px;">Work history</a> <a href="/tags/big-O/" style="font-size: 10px;">big O</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/hg/" style="font-size: 12.5px;">hg</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Phil Xu</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://www.philsblog.info/2017/09/16/Dockerfile-reference.html';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
