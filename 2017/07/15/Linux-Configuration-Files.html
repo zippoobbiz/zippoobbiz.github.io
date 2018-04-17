@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/rc.d、/etc/rc.d/rc.d或/etc/rc.d本地启动脚本">
+    <meta name="description" content="mysql configuration file~/.my.cnf 启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Configuration Files">
 <meta property="og:url" content="http://www.philsblog.info/2017/07/15/Linux-Configuration-Files.html">
 <meta property="og:site_name" content="Welcome to Phil&#39;s">
-<meta property="og:description" content="启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/rc.d、/etc/rc.d/rc.d或/etc/rc.d本地启动脚本">
+<meta property="og:description" content="mysql configuration file~/.my.cnf 启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/r">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://og2api1gp.bkt.clouddn.com/images/config.jpg">
-<meta property="og:updated_time" content="2018-04-15T14:06:08.733Z">
+<meta property="og:updated_time" content="2018-04-17T00:18:15.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Configuration Files">
-<meta name="twitter:description" content="启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/rc.d、/etc/rc.d/rc.d或/etc/rc.d本地启动脚本">
+<meta name="twitter:description" content="mysql configuration file~/.my.cnf 启动引导程序配置文件12LILO /etc/lilo.confGRUB /boot/grub/menu.lst 系统启动文件核脚本1234主启动控制文件 /etc/inittabSysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.dSysV启动脚本链接的位置 /etc/init.d/r">
 <meta name="twitter:image" content="http://og2api1gp.bkt.clouddn.com/images/config.jpg">
     
 
@@ -187,7 +187,8 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="启动引导程序配置文件"><a href="#启动引导程序配置文件" class="headerlink" title="启动引导程序配置文件"></a>启动引导程序配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LILO /etc/lilo.conf</span><br><span class="line">GRUB /boot/grub/menu.lst</span><br></pre></td></tr></table></figure>
+            <h2 id="mysql-configuration-file"><a href="#mysql-configuration-file" class="headerlink" title="mysql configuration file"></a>mysql configuration file</h2><p><code>~/.my.cnf</code></p>
+<h2 id="启动引导程序配置文件"><a href="#启动引导程序配置文件" class="headerlink" title="启动引导程序配置文件"></a>启动引导程序配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LILO /etc/lilo.conf</span><br><span class="line">GRUB /boot/grub/menu.lst</span><br></pre></td></tr></table></figure>
 <h2 id="系统启动文件核脚本"><a href="#系统启动文件核脚本" class="headerlink" title="系统启动文件核脚本"></a>系统启动文件核脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">主启动控制文件 /etc/inittab</span><br><span class="line">SysV启动脚本的位置 /etc/init.d、/etc/rc.d/init.d或/etc/rc.d</span><br><span class="line">SysV启动脚本链接的位置 /etc/init.d/rc.d、/etc/rc.d/rc.d或/etc/rc.d</span><br><span class="line">本地启动脚本 /etc/rc.d/rc.local、/etc/init.d/boot.local或/etc/rc.boot里的文件</span><br></pre></td></tr></table></figure>
 <h2 id="网络配置文件"><a href="#网络配置文件" class="headerlink" title="网络配置文件"></a>网络配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">建立网络接口的脚本 /sbin/ifup</span><br><span class="line">保存网络配置数据文件的目录 /etc/network、/etc/sysconfig/network和/etc/sysconfig/network-scripts</span><br><span class="line">保存解析DNS服务的文件 /etc/resolv.conf</span><br><span class="line">DHCP客户端的配置文件 /etc/dhclient.conf</span><br></pre></td></tr></table></figure>
 <h2 id="超级服务程序配置文件和目录"><a href="#超级服务程序配置文件和目录" class="headerlink" title="超级服务程序配置文件和目录"></a>超级服务程序配置文件和目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inetd配置文件 /etc/inetd.conf</span><br><span class="line">TCP Wrappers配置文件 /etc/hosts.allow和/etc/hosts.deny</span><br><span class="line">xinetd配置文件 /etc/xinetd.conf和/etc/xinetd.d目录里的文件</span><br></pre></td></tr></table></figure>
