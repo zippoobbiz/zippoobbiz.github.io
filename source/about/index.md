@@ -38,7 +38,7 @@ Here, let's see some real stuff!!!! My skill list!
 
 I am currently learning how to use **Kubernetes** to make product scaling easier.
 If the above list match your needs then do not hesitate to contact me!! I am ready for interviews and tests.
-Wish to speak to you soon! And sorry about the ads :D 
+Wish to speak to you soon! And sorry about the ads :D :D
 
 Cheers,
 Phillip
