@@ -1,0 +1,32 @@
+<%- partial('common/head') %>
+<body>
+    <div id="wrap">
+        <%- partial('common/header', null, {cache: !config.relative_link}) %>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <%- partial('common/content-title') %>
+                        <div class="main-body-content">
+                            <%- body %>
+                        </div>
+                    </section>
+                    <%- partial('common/sidebar') %>
+                </div>
+            </div>
+        </div>
+        <%- partial('common/footer', null, {cache: !config.relative_link}) %>
+        <%- partial('common/scripts') %>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-format="fluid"
+                                 data-ad-layout-key="-5y+bz-10-6p+ql"
+                                 data-ad-client="ca-pub-8071091076380273"
+                                 data-ad-slot="9493203372"></ins>
+        <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</body>
+</html>
