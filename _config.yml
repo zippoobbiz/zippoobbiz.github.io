@@ -98,5 +98,5 @@ qiniu:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zippoobbiz/hexo.git
+  repo: git@github.com:zippoobbiz/zippoobbiz.github.io.git
   branch: master
