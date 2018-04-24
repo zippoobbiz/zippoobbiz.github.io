@@ -32,7 +32,7 @@ Here, let's see some real stuff!!!! My skill list!
 |Q|Kafka<br/>activeMq|
 |Testing|TDD<br/>Junit|
 |DB|MySql<br/>Postgres<br/>mongoDB<br/>H2|
-|CI/CD|Jenlinks<br/>AWS codeBuild/codePipeline<br/>Docker|
+|CI/CD|{% post_link Backup-hexo-and-auto-deploy-with-Jenkins Jenlinks %}<br/>AWS codeBuild/codePipeline<br/>Docker|
 |IDE|Eclipse<br/>IntelliJ IDEA<br/>NetBeans|
 |Config|XML JSON YAML|
 
