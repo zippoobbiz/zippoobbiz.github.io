@@ -56,6 +56,9 @@ docker rmi
 docker rmi 'docker images -a -q'
 docker run xxx
 
+# remove all local stopped containers
+docker system prune
+
 # expose ports
 docker run -d -p 127.0.0.1:33301:22 centos6-ssh
 
