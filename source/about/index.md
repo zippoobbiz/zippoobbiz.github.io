@@ -39,7 +39,7 @@ You can click the tab above or the link below to know more about my work history
 
 I am currently learning how to use **Kubernetes** to make product scaling easier.
 If the above list match your needs then do not hesitate to contact me!! I am ready for interviews and tests.
-Wish to speak to you soon! And sorry about the ads :D :D
+Wish to speak to you soon! And sorry about the ads.
 
 Cheers,
 Phillip
