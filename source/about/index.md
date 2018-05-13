@@ -5,19 +5,20 @@ date: 2018-03-27 17:14:26
 
 Dear friend, 
 
-  If you're reading this, you've known me from somewhere. 
+  If you’re reading this, you know me from somewhere. 
 And if you've come this far, maybe you're willing to come a little further.
 
 I am a Developer, prefer but not limit to use Java language, having 4+ years of programming experience.
-I am not just a Programmer, I'd love to solve problems, find answers, and learn new things!
-I am passionate about my career, and wish devoute my next decade to this industry.
+I am not just a Programmer, I'd love to solve problems, find answers, and learn new skills!
+I am passionate about my career, and wish devoute the next decade to this industry.
 
 You can click the tab above or the link below to know more about my work history, find out what I designed and created in the past few years!
+
 * {% post_link 2e-Systems-GmbH 2e Systems %}
 * {% post_link Financial-Management-Group Financial Management Group %}
 * {% post_link State-Grid-Fiberlink-Corporation State Grid Fiberlink Inc. %}
 
-Here, let's see some real stuff!!!! My skill list! 
+** Here, let’s see some specific material!!!!! My skill list! **
 
 |Skill|detail|
 |:--|:--|
