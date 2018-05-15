@@ -33,7 +33,7 @@ You can click the tab above or the link below to know more about my work history
 |Q|Kafka<br/>activeMq|
 |Testing|TDD<br/>Junit|
 |DB|MySql<br/>Postgres<br/>mongoDB<br/>H2|
-|CI/CD|{% post_link Backup-hexo-and-auto-deploy-with-Jenkins Jenlinks %}<br/>AWS codeBuild/codePipeline<br/>Docker|
+|CI/CD|{% post_link Backup-hexo-and-auto-deploy-with-Jenkins Jenkins %}<br/>AWS codeBuild/codePipeline<br/>Docker|
 |IDE|Eclipse<br/>IntelliJ IDEA<br/>NetBeans|
 |Config|XML JSON YAML|
 
