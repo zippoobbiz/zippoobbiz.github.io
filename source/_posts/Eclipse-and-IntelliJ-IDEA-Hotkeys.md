@@ -17,3 +17,4 @@ categories: [Tools]
 |Back|Ctrl+[|⌘[|
 |Forward|Ctrl+]|⌘]|
 |Rename|Ctrl+Alt+R|⇧F6|
+|Go to Impl|Ctrl+mouse click|⌥+⌘+b|
