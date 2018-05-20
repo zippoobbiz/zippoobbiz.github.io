@@ -5,4 +5,22 @@ tags: [Tools, Gradle]
 categories: [Tools, Gradle]
 ---
 
+Build
+```bash
+gradle clean
+gradle build
+```
+
+Run application
+```bash
+# add application plugin
+apply plugin 'application'
+
+# add main class
+mainClassName = 'com.mycompany.Main'
+
+gradle run
+
+```
 {% qnimg gradle.png %}
+
