@@ -39,6 +39,15 @@ comments: >
     Late afternoon is best.
     Backup contact is Nancy
     Billsmer @ 338-4338.
+
+
+# load from yaml to HashMap<T, List<Y>>
+map:
+  T:
+    -
+      Y
+      Y
+      Y
 ```
 
 {% qnimg gears.jpg %}
