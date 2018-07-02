@@ -1,12 +1,13 @@
 ---
 title: BigQuery
 date: 2018-07-01 14:24:58
-tags: [GCP]
+tags: [GCP, BigQuery]
 categories: [GCP, BigQuery]
 ---
 
 {% qnimg bigquery.png %}
 
+### feature summary
 * Petabyte scale DW on GCP for interactive analysis (near real time analysis, it’s not totally real time, cannot respond in millisecond, microsecond).
 * Prefer demoralised table structure using nested, repeated fields.
 * Separate storage and compute.
