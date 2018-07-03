@@ -11,9 +11,11 @@ low-lantency
 Capturing data and distributing data
 Unified global server less service - not attached to a specific project, domain or user
 Smooth out traffic spikes or bursty communications
+Balancing the messages
 Autoscales to deal with variable volumes of data
 Simplifies the distribution of events
 Decouple the publisher and subscriber
+Not just streaming, also support batch???
 
 A subscriber ACKs each message for every subscription
 A message is resent if subscriber takes more than “ackDeadline” to respond

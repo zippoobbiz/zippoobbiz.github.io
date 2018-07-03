@@ -25,3 +25,9 @@ FlatMap: to filter, only return the value needed
 Combine Vs Group By
 combine by key is faster and optimised by google
 Group by is not balanced
+
+### Major components
+* Pipelines
+* PCollection
+* Transforms
+* I/O Sources and Sinks 

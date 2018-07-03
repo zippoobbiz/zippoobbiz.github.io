@@ -57,12 +57,21 @@ may need to wait a few minutes after the cluster spin up
 The scripts are designed for all nodes(including master and worker), you can specify the package to be installed for different ROLEs in the scripts
 dataproc install datalab as default?
 
+### Hadoop Eco system
 
+##### Oozie
+Oozie is a workflow scheduler system to manage Apache Hadoop jobs.
 
+##### Sqoop
+Transfers large amounts of data into hfs from relational databases such as MySQL. It is a transferring framework.
 
+##### Pig
+Pig is a high level scripting language that is used with Apache Hadoop. Pig enables data workers to write complex data transformations without knowing Java. Pig’s simple SQL-like scripting language is called Pig Latin, and appeals to developers already familiar with scripting languages and SQL.
 
-
-
+##### Hive
+Apache Hive is an open-source data warehouse system for querying and analyzing large datasets stored in HDFS.
+Hive supports HiveQL which is like SQL, HiveQL is then translated to map-reduce jobs in the background.
+Map-reduce is a data processing technique used commonly to extract, transform and load data on Hadoop
 
 
 

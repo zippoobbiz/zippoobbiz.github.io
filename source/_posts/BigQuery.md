@@ -27,6 +27,9 @@ Tableau, Looker, Qlik, Data studio, etc
 
 Supported ingest format: JSON, CSV, Avro, etc.
 
+### Ingestion:
+streaming and batch
+Why use dataflow if we can use stream input directly on BigQuery? Because BigQuery only accept table format, the source data mey need to be converted in dataflow.
 
 ### Sharing
 BigQuery is a way for you to share data beyond the silos of your company’s structure, it’s a way of collaboration
@@ -69,14 +72,29 @@ $5 per TB
 Discount on old data.
 Storage cost is about the same as the cost of GCS, get the sam discount as well (after 90 days)
 
+can limit the usage on the project or the user
+
+#### reduce cost
+* Use preview options
+* Use Query validator before you run your query
+* Avoiding select * statement
+* Hard limit the capacity allowed to be processed on projects and users
+
 ### Partition
 Up to 2,500 partitions
 Daily limits: 2,000 partition updates per table per day
 Rate limit: 50 partition updates every 10 seconds
 
 pseudo column _PARTITIONTIME
+user can use pseudo column, but cannot see it
 
 ### wildcard
+union join all similar named tables within the dataset
+tables must have the same structure
+_TABLE_SUFFIX in where clause
+
+### Authorized Views:
+Create views, add account to the view, add authorized view from the source table
 
 ### Questions:
 
