@@ -1,5 +1,5 @@
 ---
-title: GCP Fundamentals
+title: GCP Data Engineer Fundamentals
 date: 2018-07-03 10:07:07
 tags: [GCP, GCS, GCE, Cloud SQL, Dataproc, Datastore, BigTable, BigQuery, Datalab, TensorFlow, Cloud ML Engine, ML APIs]
 categories: [GCP]
