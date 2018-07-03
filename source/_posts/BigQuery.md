@@ -69,6 +69,15 @@ $5 per TB
 Discount on old data.
 Storage cost is about the same as the cost of GCS, get the sam discount as well (after 90 days)
 
+### Partition
+Up to 2,500 partitions
+Daily limits: 2,000 partition updates per table per day
+Rate limit: 50 partition updates every 10 seconds
+
+pseudo column _PARTITIONTIME
+
+### wildcard
+
 ### Questions:
 
 Is could SQL and Spanner respond quicker than BigQuery?
