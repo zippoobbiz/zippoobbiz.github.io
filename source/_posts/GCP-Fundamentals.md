@@ -49,6 +49,7 @@ N1-standard-4
 if only 60% of usage, get 15% discount
 preemptible VM 80% discount (Not sure) others can take it away anytime
 It's useful when you just want to run an ad hoc function that is not incorporated in to other GCP Paas products.
+An instance can have only one service account.
 
 ### Cloud SQL
 Single machine
@@ -165,9 +166,15 @@ Natural language API analyses
 
 ### IAM
 Member types :
-Google account (Single person) 
-Service account (Not a person)
-Google Group (Multiple people)
+* Google account (Single person) 
+* Service account (Not a person)
+	can be used by services and applications running on your Google Compute Engine instance to interact with other Google Cloud Platform APIs
+	An instance can have only one service account.
+	Two types of service accounts are available to Compute Engine instances:
+		- User-managed service accounts
+		- Google-managed service accounts
+
+* Google Group (Multiple people)
 
 ### Disk
 Standard persistent disk vs SSD, is standard persistent disk HDD?

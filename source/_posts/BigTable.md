@@ -19,16 +19,24 @@ Data is stored on contiguous rows, as tablets, stored on GCS
 Create the cluster first. You can add nodes, remove nodes without having any down time
 Use Python or data flow, HBase client, HBase API, BigQuery 
 Insert data by creating a mutation
+Requests -> clients -> front-end server -> nodes
+Switching between SSD and HDD storage
 
 ### structure
 
 Only one rowkey, none of the other columes can be indexed
 Column family - related columns that tends to be updated together
 
-### design
+## design
 * Return adjacent rows as much as possible 
 * distributed writing as much as possible
 * distributed reads as much as possible
+
+### Avoid hotspotting
+* Field promotion - prefered
+	avoids hotspotting in almost all cases and it tends to make it easier to desing a row key that facilitates queries
+* Salting
+
 
 #### Wide short vs narrow tall
 Wide for dense data
@@ -51,7 +59,7 @@ Avoid Keyrow type examples :
 
 ### Best practice
 
-BigTable learns over time - have to leave BigTable up and running in a typical scenario. Let big query warm up for couple of hours and make sure you are not using BigTable for small amount of data(cannot be smaller than 300GB)
+BigTable learns over time - have to leave BigTable up and running in a typical scenario. Let big query warm up for couple of hours and make sure you are not using BigTable for small amount of data(cannot be smaller than 300GB, recommended greater than 1T)
 BigTable will re-balance the data - which allows imperfect row key design
 
 ### performance

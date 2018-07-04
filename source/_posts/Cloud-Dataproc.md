@@ -25,6 +25,9 @@ move to GCS:
 Can dataproc read data from bigtable? bigquery?(via GCS, and big query connector, The connector to GCS is built into Dataproc)
 standard mode vs high availability mode?
 
+### What type of jobs can I run?
+Cloud Dataproc provides out-of-the box and end-to-end support for many of the most popular job types, including Spark, Spark SQL, PySpark, MapReduce, Hive, and Pig jobs.
+
 ### Scaling
 * Vertical scaling: larger computer
 * horizontal scaling: more computers
@@ -49,7 +52,7 @@ Spark partitions data and memory across the cluster and knows how to recover thr
 panda format is in memory, limited by size. Don’t use it as full-data, use it after aggregation
 panda dataframe is mutabel, spark dataframe is immutable.
 
-### Installation scripts
+### Initialization actions (was called installation scripts in the coursera course)
  
 you can load multiple initialisation scripts to customise the software on dataproc worker and master
 Dataproc is aware of new instances joining the cluster and make sure that they run the cluster’s initialisation scripts
@@ -72,6 +75,12 @@ Pig is a high level scripting language that is used with Apache Hadoop. Pig enab
 Apache Hive is an open-source data warehouse system for querying and analyzing large datasets stored in HDFS.
 Hive supports HiveQL which is like SQL, HiveQL is then translated to map-reduce jobs in the background.
 Map-reduce is a data processing technique used commonly to extract, transform and load data on Hadoop
+
+### Pre-emptible VMs
+* Processing only
+* No preemptible-only clusters
+* Persistent disk is used for local caching and not available through HDFS
+* The managed group automatically re-add workers lost due to reclamation
 
 
 
