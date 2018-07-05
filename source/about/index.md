@@ -12,11 +12,13 @@ I am a Developer, prefer but not limit to use Java language, having 4+ years of 
 I am not just a Programmer, I'd love to solve problems, find answers, and learn new skills!
 I am passionate about my career, and wish devoute the next decade to this industry.
 
+
 You can click the tab above or the link below to know more about my work history, find out what I designed and created in the past few years!
 
 * {% post_link 2e-Systems-GmbH 2e Systems %}
 * {% post_link Financial-Management-Group Financial Management Group %}
 * {% post_link State-Grid-Fiberlink-Corporation State Grid Fiberlink Inc. %}
+* Servian Pty Ltd
 
 ** Here, let’s see some specific material!!!!! My skill list! **
 
@@ -37,9 +39,8 @@ You can click the tab above or the link below to know more about my work history
 |IDE|Eclipse<br/>IntelliJ IDEA<br/>NetBeans|
 |Config|XML JSON YAML|
 
-I am currently learning how to use **Kubernetes** to make product scaling easier.
-If the above list match your needs then do not hesitate to contact me!! I am ready for interviews and tests.
-Wish to speak to you soon! And sorry about the ads.
+I believe cloud & data are the future!!! and I am currently focusing on GCP data engineering, wish to get the cert soon.
+Feel free to talk to me if we share the same interests.
 
 Cheers,
 Phillip
