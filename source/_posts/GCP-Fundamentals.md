@@ -1,6 +1,6 @@
 ---
 title: GCP Data Engineer preparation
-date: 2018-07-03 10:07:07
+date: 2018-06-26 10:07:07
 tags: [GCP, GCS, GCE, Cloud SQL, Dataproc, Datastore, BigTable, BigQuery, Datalab, TensorFlow, Cloud ML Engine, ML APIs]
 categories: [GCP]
 ---
