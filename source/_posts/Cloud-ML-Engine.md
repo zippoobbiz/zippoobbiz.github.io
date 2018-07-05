@@ -1,17 +1,36 @@
 ---
-title: Cloud ML Engine
+title: Cloud ML Engine & Machine Learning & ML API
 date: 2018-07-04 10:09:54
 tags: [GCP, ML, Cloud ML Engine]
 categories: [GCP, Cloud ML Engine]
 ---
 
-Scale tiers:
+Use python to run c++
+
+### Scale tiers
 * BASIC
 * STANDARD_1
 * PREMIUM_1
 * BASIC_GPU
 * BASIC_TPU
 * CUSTOM
+
+On GCP:
+Collect data
+- login APIs
+- cloud pub-sub
+- other real-time streaming
+
+Organize data
+- BigQuery
+- Dataflow
+- Machine learning processing SDK
+
+Create model
+- Tensorflow
+
+Train & deploy model
+- Cloud engine
 
 ### TensorFlow
 
@@ -43,6 +62,10 @@ Classification is supervised learning task for modeling and predicting categoric
 * Clustering estimator
 Clustering is an unsupervised learning task for finding natural groupings of observations based on the inherent structure within your dataset. Such as customer segmentation, grouping similar items in e-commerce, and social network analysis.
 
+
+* Supervised learning vs Unsupervised learning
+* test cases with label or not.
+
 ### Online prediction vs batch prediction
 * Online
 Optimized to minimize the latency of serving predictions.
@@ -62,6 +85,7 @@ https://www.tensorflow.org/programmers_guide/embedding
 If model parameters are variables that get adjusted by training with existing data, your hyperparameters are the variables about the training process itself.
 * Number of hidden layers
 * Number of nodes in each hidden layer
+* Learning rate
 
 
 ### Feature engineering
@@ -74,5 +98,47 @@ Type:
 
 You could use bucketization to turn year of birth and income into categorical features, but thr raw conlumns are continuous.
 
+### Overfitting
+Reduce number of nodes or layers
+Dropout or early stopping
 
+
+### Error measurement
+Regression: MSE
+Classification: cross-entropy
+
+### Performance evaluation
+For unbalanced dataset
+confusion matrix - to describe the performance 
+
+{% qnimg confusionMatrix.png %}
+
+Accuracy when ML says “cat” —— 991 / 1000 - if balance
+Precision = TP / (FP + FP) —— 1/1 - if unbalanced - accuracy when classifier says yes - things are common
+Recall = TP / (TP + FN) —— 1/10- if unbalanced - Accuracy when the truth is yes - things are rare
+
+
+### Prepare the dataset:
+Good dataset should cover all cases, Ensure to include negative cases
+But before you throw out the outliers, you need to first see whether if you can collect enough outliers, for some outliers:
+- cannot just throw out it
+- a better approach: why does this happen?
+- reflect something about the data
+- You want to make sure enough examples in the training dataset, so should keep it
+- the fewer things you throw out, the more robust your model is
+
+### splitting dataset
+Original data split into:
+training data
+validation data
+Test data
+
+cross validation - change the split, take the average, if data is not enough
+
+### ML APIs
+Natural language API analyses
+* Sentiment
+* Category
+* Entity
+* Syntax
 

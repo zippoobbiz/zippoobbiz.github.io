@@ -1,5 +1,5 @@
 ---
-title: GCP Data Engineer Fundamentals
+title: GCP Data Engineer preparation
 date: 2018-07-03 10:07:07
 tags: [GCP, GCS, GCE, Cloud SQL, Dataproc, Datastore, BigTable, BigQuery, Datalab, TensorFlow, Cloud ML Engine, ML APIs]
 categories: [GCP]
@@ -7,12 +7,15 @@ categories: [GCP]
 
 {% qnimg gcp.png %}
 
-Why GCP? 
+I am summarizing everything I have learned from GCP so far. It includes all of the resources I have found.
+In this page, most of the content comes in bullet points format. Have a quick look through them, see if you can tell the story behind each of item. If you can, then you have a pretty good coverage for the GCP Data Engineer Cert. If you haven't heard of them, don't worry, you still have time, just google them or go to the sub page to find out more dertails. (There are some sub pages which will give you a bit more details of the things summarized in this page.)
+Please just comment below if you found something missing from the exam and have fun!
+
+### Why GCP? Why Cloud? 
 MapReduce tends to be limited by the number of compute nodes that you have. Use cloud, you have:
 Grate scalability and reliability
 As no-ops as possible, minimise a system administration overhead
 As flexible as possible
-
 
 ### GCS
 Global scale data and computer infrastrure, Staging area
@@ -42,8 +45,6 @@ Cloud storage offers different products for accessibility and archival.
 
 Amazon Glacier may take hours
 
-
-
 ### Google Computer Engine
 N1-standard-4
 if only 60% of usage, get 15% discount
@@ -53,7 +54,7 @@ An instance can have only one service account.
 
 ### Cloud SQL
 Single machine
-Handle *gigabytes* of data
+Handle **gigabytes** of data
 Relational database, support update and deletes individual fields
 Flexible pricing, passivate it when not running, good for testing
 Managed backups by google
@@ -65,6 +66,7 @@ Google security
 ### {% post_link Cloud-Dataproc Dataproc %}
 Cluster contains master(s), workers
 Resizable
+
 ##### storage
 * Can use HDFS on clusters node.
 * Can store data on GCS and use preemptible(probably 10 standard, 30 preemptible) to run your job.(You don’t want to store it on node, because you don’t want to pay the compute when you only need storage) separate the compute and storage. Store it in the save place as the cluster.
@@ -114,11 +116,6 @@ You can join data between google sheet and big query, can you join other type of
 Loading data from GCS, can you load from Datastore?
 Can stream data in using dataflow as well.
 
-### {% post_link Cloud-Dataprep Dataprep %}
-
-### {% post_link Cloud-Dataflow Dataflow %}
-
-### {% post_link Cloud-Pub-Sub Pub/sub %}
 
 ### Datalab
 python numpy panda
@@ -139,22 +136,26 @@ dimension X
 metrics  Y
 
 ### ML
-Overfitting
-Reduce number of nodes or layers
-Dropout or early stopping
+gradient descent - walk down an error surface - doesn’t guaranteed to converge
+learning rate - hyper parameter
+epoch - a traversal through the entire training dataset
+Weights - parameters we optimize
+Batch size - the amount of data we compute error on
+Evaluation - is the model good enough? Has to be done on full dataset
+Training - gradient descent + evaluation
 
+Neurons - one unit of combining inputs
+Hidden layer - set of neutrons that operate on the same set of inputs
+Inputs - What you feed into a neuron
+Features -  transformation of inputs, such as x^2
+Feature Engineering - coming up with what transformations to include
+Softmax - normalize all input probabilities
+
+Anything in ML model must be numeric
 
 ### TensorFlow
-Python runs c++
+Python -> c++
 
-### Cloud ML Engine
-
-### ML APIs
-Natural language API analyses
-* Sentiment
-* Category
-* Entity
-* Syntax
 
 ### StackDriver functions 
 * Debugger - allows you to inspect the state of a running application in real time without stopping or slowing it down. You can use it to see your code behavior in production.
@@ -165,6 +166,13 @@ Natural language API analyses
 * Logging - Logging allow you to store, search, analyst, monitor and alert on log data and events from GCP. Logging is fully-managed that can scale and ingest logs from thousands of VMs. You can also analyze this in real-time.
 
 ### IAM
+Roles:
+* predefined
+* primitive
+* custom
+
+When you assign both predefined and primitive roles to a user, the permissions granted are a union of each role's permissions
+
 Member types :
 * Google account (Single person) 
 * Service account (Not a person)
@@ -180,5 +188,11 @@ Member types :
 Standard persistent disk vs SSD, is standard persistent disk HDD?
 preemptible instance will self close after running 24 hours
 Vm snapshots are used for backup operation or transfer of data, it’s a copy of the disk , snapshot already contains the os
+
+### {% post_link Cloud-Dataprep Dataprep %}
+
+### {% post_link Cloud-Dataflow Dataflow %}
+
+### {% post_link Cloud-Pub-Sub Pub/sub %}
 
 

@@ -119,3 +119,19 @@ An authorized view allows you to share query results with particular users and g
 Is could SQL and Spanner respond quicker than BigQuery?
 what’s tail latency? tail skew?
 use having clause to avoid tail skew
+
+### Jobs
+* load
+* extract
+* query
+* copy
+
+### IAM
+For example, a user who merely has bigquery.dataViewer permissions on a dataset without any other permissions can only list the tables in the dataset and use the get() APIs to read the contents of the tables. The user cannot query the data without additional permissions.
+
+For an example of a user with permissions to run queries, consider the following scenario. A user who has bigquery.user permissions in projectA, and bigquery.dataViewer permissions on projectA:dataset1 and projectB:dataset2 can run a query in projectA that uses either or both of these datasets.
+
+The dataViewer doesn’t have the ability to incur costs
+
+
+
