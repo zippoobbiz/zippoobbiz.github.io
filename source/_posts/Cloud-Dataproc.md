@@ -7,7 +7,7 @@ categories: [GCP, Dataproc]
 
 {% qnimg gcp.png %}
 
-Use dataproc process unstructured data, it takes care of all the over head and normally take 90 secs to spin up
+Dataproc takes care of all the over head and normally take 90 secs to spin up
 Cheep storage Terabytes to Petabytes is good running it on cloud.
 Use CLI and GC console to operate. The console and GC command make the same API call to operate.
 Create clusters specifically for the job

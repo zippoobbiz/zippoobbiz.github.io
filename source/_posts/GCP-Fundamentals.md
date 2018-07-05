@@ -7,37 +7,41 @@ categories: [GCP]
 
 {% qnimg gcp.png %}
 
-I am summarizing everything I have learned from GCP so far. It includes all of the resources I have found.
-In this page, most of the content comes in bullet points format. Have a quick look through them, see if you can tell the story behind each of item. If you can, then you have a pretty good coverage for the GCP Data Engineer Cert. If you haven't heard of them, don't worry, you still have time, just google them or go to the sub page to find out more dertails. (There are some sub pages which will give you a bit more details of the things summarized in this page.)
-Please just comment below if you found something missing from the exam and have fun!
+Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:
+* [Coursera Google Data Engineer courses](https://www.coursera.org/specializations/gcp-data-machine-learning)
+* [Udemy courses](https://servian.udemy.com/learn-gcp-become-a-certified-data-engineer-express-course)
+* [Google Cloud Platform Documentation](https://cloud.google.com/docs/)
+* [Sample Exam](https://cloud.google.com/certification/practice-exam/data-engineer)
+* [Google Professional Data Engineer Dumps](https://www.prepaway.com/professional-data-engineer-exam.html)
+
+I know that you can find everything on Google Cloud Documents, here is a sub set of GCP document for the Data Engineer exam.
+
+
+In this page, most of the contents are bullet points. Have a quick look through them, see if you can tell the story behind each of the item. If you can, then you have a pretty good coverage for the GCP Data Engineer Cert. If you haven't heard of them, don't worry, you still have time, just google them or go to the sub page to find out more dertails. (There are some internal link which will give you a bit more information of the things summarized in this page.)
+Please just comment below if you found something missing from the exam and good luck!
 
 ### Why GCP? Why Cloud? 
-MapReduce tends to be limited by the number of compute nodes that you have. Use cloud, you have:
-Grate scalability and reliability
-As no-ops as possible, minimise a system administration overhead
-As flexible as possible
+* MapReduce tends to be limited by the number of compute nodes that you have. Use cloud, you have:
+* Grate scalability and reliability
+* As no-ops as possible, minimise a system administration overhead
+* As flexible as possible
 
 ### GCS
-Global scale data and computer infrastrure, Staging area
-BLOB, raw data in any format
-Disk goes away with compute engine, GCS will always be there
-durable, replicated
-can use it to stage the data onto other GCP products
-
-Load data to GCS: gustil cp
-K V pare, even it looks like directory.
-can get access by: REST API, console
-Transfer service - could be one time, could be recurring
-source: locamachine, AWS S3, etc.
-every bucket belongs to a project.
-edge cached
-
-Each zone is a physical data center
-zone a b and c doesn’t means the geographical zone.- to make sure all your vms are at the same place, do deploy them in the same session
-
-Highly durable, stores data redundantly, highly available, infinite scalability and consistent. Mainly used for storing binary or object data. Such as images, audio, video and backups.
-Cloud storage offers different products for accessibility and archival.
-
+* Global scale data and computer infrastrure, Staging area
+* BLOB, raw data in any format
+* Disk goes away with compute engine, GCS will always be there
+* durable, replicated
+* can use it to stage the data onto other GCP products
+* Load data to GCS: gustil cp
+* K V pare, even it looks like directory.
+* can get access by: REST API, console
+* Transfer service - could be one time, could be recurring
+* source: locamachine, AWS S3, etc.
+* every bucket belongs to a project.
+* edge cached
+* Each zone is a physical data center -zone a b and c doesn’t means the geographical zone.- to make sure all your vms are at the same place, do deploy them in the same session
+* Highly durable, stores data redundantly, highly available, infinite scalability and consistent. Mainly used for storing binary or object data. Such as images, audio, video and backups.
+* Cloud storage offers different products for accessibility and archival.
 * Multi-regional - Ideal for content that is required to be served across geographic regions.
 * Regional - For use within a single region.
 * Nearline - Used for data accessed less than once a month. (Archival solution, you may still be able to retrieve in less then a second)
@@ -45,117 +49,113 @@ Cloud storage offers different products for accessibility and archival.
 
 Amazon Glacier may take hours
 
-### Google Computer Engine
-N1-standard-4
-if only 60% of usage, get 15% discount
-preemptible VM 80% discount (Not sure) others can take it away anytime
-It's useful when you just want to run an ad hoc function that is not incorporated in to other GCP Paas products.
-An instance can have only one service account.
+### Google Computer Engine (GCE)
+* N1-standard-4
+* if only 60% of usage, get 15% discount
+* preemptible VM 80% discount (Not sure) others can take it away anytime
+* It's useful when you just want to run an ad hoc function that is not incorporated in to other GCP Paas products.
+* An instance can have only one service account.
 
 ### Cloud SQL
-Single machine
-Handle **gigabytes** of data
-Relational database, support update and deletes individual fields
-Flexible pricing, passivate it when not running, good for testing
-Managed backups by google
-connect from anywhere
-automatic replication
-fast connection from GCE & GAE etc.
-Google security
+* Single machine
+* Handle **gigabytes** of data
+* Relational database, support update and deletes individual fields
+* Flexible pricing, passivate it when not running, good for testing
+* Managed backups by google
+* connect from anywhere
+* automatic replication
+* fast connection from GCE & GAE etc.
+* Google security
 
 ### {% post_link Cloud-Dataproc Dataproc %}
-Cluster contains master(s), workers
-Resizable
+* Cluster contains master(s), workers
+* Resizable
+* Think the cluster as a job specific resources.
+* Google managed hadoop Pig, Hive, Spark programs
+* Hadoop ecosystem
+* Spark - interactive SQL
+* pig - ETL script
+* Hive - do queries
+* Presto???
 
-##### storage
+###### storage
 * Can use HDFS on clusters node.
 * Can store data on GCS and use preemptible(probably 10 standard, 30 preemptible) to run your job.(You don’t want to store it on node, because you don’t want to pay the compute when you only need storage) separate the compute and storage. Store it in the save place as the cluster.
 
-Think the cluster as a job specific resources.
-Google managed hadoop Pig, Hive, Spark programs
-Hadoop ecosystem
-Spark - interactive SQL
-pig - ETL script
-Hive - do queries
-Presto???
+
 
 ### Datastore
-Terabytes
-HashMap K V pare
-Search by *key or property*
-*Transactional*
-what's kind in datastore???
-Support CRUD operation
-hierarchical data
+* Handle terabytes of data
+* HashMap K V pare
+* Search by *key or property*
+* Transactional
+* what is "kind" in datastore???
+* Support CRUD operation
+* hierarchical data
 
-Highly scalable and managed NoSQL database. Highly Durable and Available. Supports ACID transactions (which is typical for most SQL data warehouse solutions), SQL-like queries.
-Cloud datastore are mainly used for User profiles, such as social network profiles and game statuses.
-Highly Scalable, automatic sharing and replication (Highly Available)
-Supports ACID Transactions (consistent and durable)
-SQL like queries
-Can Update Attributes (or add Attributes which is like the columns and rows)
+* Highly scalable and managed NoSQL database. Highly Durable and Available. Supports ACID transactions (which is typical for most SQL data warehouse solutions), SQL-like queries.
+* Cloud datastore are mainly used for User profiles, such as social network profiles and game statuses.
+* Highly Scalable, automatic sharing and replication (Highly Available)
+* Supports ACID Transactions (consistent and durable)
+* SQL like queries
+* Can Update Attributes (or add Attributes which is like the columns and rows)
 
 ### {% post_link BigTable BigTable %}
-Petabytes
-Support append only operation
-No transactional support
-Always right a new row, append to the table, read the latest data from the table backward, so always get the newest version of the object
-High throughput 
-No-ops
-flattened data
-Search only based on the rowkey, important to design the good key
-to find the key quickly, avoid hotspot, want it to be distributed.
-Make the table tall and narrow.
-column family, group related columns? but why?????
+* Petabytes
+* Support append only operation
+* No transactional support
+* Always right a new row, append to the table, read the latest data from the table backward, so always get the newest version of the object
+* High throughput 
+* No-ops
+* IoT
+* flattened data
+* Search only based on the rowkey, important to design the good key
+* to find the key quickly, avoid hotspot, want it to be distributed.
+* Make the table tall and narrow.
+* column family, group related columns? but why?????
 
 ### {% post_link BigQuery BigQuery %}
-standard SQL 2011 / lagecy SQL
-user defined function in JS
-Query CSV, JSON, Avro files on GCS or Google sheets without ingestion, called federated data
-You can join data between google sheet and big query, can you join other type of data from GCS？
-Loading data from GCS, can you load from Datastore?
-Can stream data in using dataflow as well.
-
+* standard SQL 2011 / lagecy SQL
+* user defined function in JS
+* Query CSV, JSON, Avro files on GCS or Google sheets without ingestion, called federated data
+* You can join data between google sheet and big query, can you join other type of data from GCS？
+* Loading data from GCS, can you load from Datastore?
+* Can stream data in using dataflow as well.
 
 ### Datalab
 python numpy panda
 Can use Python SQL JS to process data
 
 ### DataStudio 
-data sources
-* BigQuery
-* MySQL
-* CloudSQL
-* Google Sheet
-* Google analytics
-
-need the right permission
-live update
-datastudio is stored on google drive
-dimension X 
-metrics  Y
+* data sources: BigQuery, MySQL, CloudSQL, Google Sheet, Google analytics
+* need the right permission
+* live update
+* Datastudio is stored on google drive
+* dimension X 
+* metrics  Y
 
 ### ML
-gradient descent - walk down an error surface - doesn’t guaranteed to converge
-learning rate - hyper parameter
-epoch - a traversal through the entire training dataset
-Weights - parameters we optimize
-Batch size - the amount of data we compute error on
-Evaluation - is the model good enough? Has to be done on full dataset
-Training - gradient descent + evaluation
+* gradient descent - walk down an error surface - doesn’t guaranteed to converge
+* learning rate - hyper parameter
+* epoch - a traversal through the entire training dataset
+* Weights - parameters we optimize
+* Batch size - the amount of data we compute error on
+* Evaluation - is the model good enough? Has to be done on full dataset
+* Training - gradient descent + evaluation
 
-Neurons - one unit of combining inputs
-Hidden layer - set of neutrons that operate on the same set of inputs
-Inputs - What you feed into a neuron
-Features -  transformation of inputs, such as x^2
-Feature Engineering - coming up with what transformations to include
-Softmax - normalize all input probabilities
 
-Anything in ML model must be numeric
+* Neurons - one unit of combining inputs
+* Hidden layer - set of neutrons that operate on the same set of inputs
+* Inputs - What you feed into a neuron
+* Features -  transformation of inputs, such as x^2
+* Feature Engineering - coming up with what transformations to include
+* Softmax - normalize all input probabilities
+
+
+* Anything in ML model must be numeric
 
 ### TensorFlow
-Python -> c++
-
+* Python -> c++
 
 ### StackDriver functions 
 * Debugger - allows you to inspect the state of a running application in real time without stopping or slowing it down. You can use it to see your code behavior in production.
@@ -180,7 +180,7 @@ Member types :
 	An instance can have only one service account.
 	Two types of service accounts are available to Compute Engine instances:
 		- User-managed service accounts
-		- Google-managed service accounts
+		 - Google-managed service accounts
 
 * Google Group (Multiple people)
 
