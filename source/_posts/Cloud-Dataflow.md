@@ -40,12 +40,16 @@ Dataflow service will immediately stop ingesting new data from input sources, bu
 
 ### The Cloud Dataflow connector
 Spanner
-BigTable
+BigTable - need a separate lib to connect to Bigtable, BigQuery doesn't need it, it's built in the apache beam lib
 
 Dataflow has built in R/W for BigQuery
 
 ### Windowing
 default windowing behavior is to assign all elements of a PCollection to a single global window, even for unbounded PCollection
+* Fixed
+* Sliding
+* session
+* single global (default)
 
 ### Triggers
 Type:
@@ -59,3 +63,5 @@ Type:
 ### Access Control
  The Cloud Dataflow Worker role (roles/dataflow.worker) provides the permissions (dataflow.workItems.lease, dataflow.workItems.update, and dataflow.workItems.sendMessage) necessary for a Compute Engine service account to execute work units for a Cloud Dataflow pipeline. It should typically only be assigned to such an account, and only includes the ability to request and update work from the Cloud Dataflow service.
 
+### PCollection
+It seems the PCollection is immutable? Not sure, encountered an exception while playting with the code

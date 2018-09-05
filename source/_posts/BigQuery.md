@@ -15,7 +15,19 @@ categories: [GCP, BigQuery]
 * Support both standard SQL(SQL 2011), legacy SQL. Default is legacy SQL. Standard SQL is preferred since BigQuery 2.0
 * No-ops
 * Generate immutable audit logs. you know every time somebody’s runs a query on it and you basically get those audit logs which cannot be tampered with. So you will know what people have done to each dataset.
-* Query results are cached for approximately 24 hours by default, query results are not cached if you specify a destination table.
+* 
+
+### Cache
+Query results are cached for approximately 24 hours by default
+Not cached cases:
+* When a destination table is specified in the job configuration, the web UI, the command line, or the API
+* If any of the referenced tables or logical views have changed since the results were previously cached
+* When any of the tables referenced by the query have recently received streaming inserts (a streaming buffer is attached to the table) even if no new rows have arrived
+* If the query uses non-deterministic functions; for example, date and time functions such as CURRENT_TIMESTAMP() and NOW(), and other functions such as CURRENT_USER() return different values depending on when a query is executed
+* If you are querying multiple tables using a wildcard
+* If the cached results have expired; typical cache lifetime is 24 hours, but the cached results are best-effort and may be invalidated sooner
+* If the query runs against an external data source
+
 
 ### Structure
 * Big query is not transactional
@@ -26,7 +38,7 @@ categories: [GCP, BigQuery]
 Tools with connector:
 Tableau, Looker, Qlik, Data studio, etc
 
-Supported ingest format: JSON, CSV, Avro, etc.
+Supported ingest format: JSON (newline delimited only), CSV, Avro, Parquet, ORC, Google Cloud Datastore (Store on GCS only).
 
 ### Ingestion:
 streaming and batch
@@ -36,6 +48,7 @@ Can load data from:
 * Google Cloud Storage
 * Google Drive
 * Google Cloud Bigtable
+* Stream data in from Fluentd by using a plugin
 
 Cannot load from:
 Cloud SQL
@@ -47,7 +60,6 @@ Cannot use the Web UI to:
 
 All the above three operations can be performed using the "bq" command.
 
-
 ### Sharing
 BigQuery is a way for you to share data beyond the silos of your company’s structure, it’s a way of collaboration
 you can share the dataset, allow them to write ad hoc query, also share the query, share the ability of analysis
@@ -56,7 +68,28 @@ dataSets contain tables and views
 You can select specific rows and columns and save it as view, then share it with others(other project)
 
 ### External storage:
-GCS, google sheet, bigtable
+GCS, google sheet, BigTable
+
+#### From BigTable
+Permanent - can share
+* Create a table definition file (for the CLI or API)
+* Create a table in BigQuery linked to the external data source
+* Query the data using the permanent table
+
+To share you need:
+* READER or bigquery.dataViewer
+* biguqery.user
+* bigtable.reader
+
+Temporary
+it cannot be shared with others, is useful for one-time, d-hoc queries over external data, or for extract, transform, and load (ETL) processes.
+
+* A table definition file with a query
+* An inline schema definition with a query
+* A JSON schema definition file with a query
+
+* Create a table definition file
+* Submit both a query and a table definition file
 
 
 SQL Functions:
@@ -133,5 +166,34 @@ For an example of a user with permissions to run queries, consider the following
 
 The dataViewer doesn’t have the ability to incur costs
 
+#### Roles
 
+* bigquery.user
+	- Permissions to run jobs, including queries, within the project. 
+	- Enumerate their own jobs, cancel their own jobs, and enumerate datasets within a project. 
+	- Allows the creation of new datasets within the project; the creator is granted the bigquery.dataOwner role for these new datasets.
 
+* bigquery.jobUser
+	- Permissions to run jobs, including queries, within the project. 
+	- Can enumerate their own jobs and cancel their own jobs.
+	- Does not allow access to any BigQuery data
+
+* bigquery.dataViewer
+	- Read the dataset's metadata and to list tables in the dataset.
+	- Read data and metadata from the dataset's tables.
+
+* bigquery.dataEditor
+	- Read the dataset's metadata and to list tables in the dataset.
+	- Create, update, get, and delete the dataset's tables.
+
+* bigquery.dataOwner
+	- Read, update, and delete the dataset.
+	- Create, update, get, and delete the dataset's tables.
+
+* bigquery.admin
+	- all
+
+### Appliction profile??
+* stores settings that tell your Cloud Bigtable instance how to handle incoming requests from an application
+* affect how your applications communicate with an instance that uses replication
+* especially useful for instances that have 2 clusters

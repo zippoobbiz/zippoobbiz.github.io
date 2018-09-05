@@ -53,4 +53,8 @@ $$ is the process ID (PID) of the script itself.
 * 1 -- stdout
 * 2 -- stderr
 
+change onwership
+```bash
+sudo chown -R phillipxu: /usr/local/lib
+```
 {% qnimg cli.jpg %}

@@ -36,9 +36,14 @@ Train & deploy model
 
 * categorical_column_with_hash_bucket
 Use it when we don't know the set of possible values in advance, each possible value in the feature column occupation will be hashed to an integer ID as we encounter them in training.
-categorical_column_with_identity
+* categorical_column_with_identity
+Use this when your inputs are integers in the range [0, num_buckets), and you want to use the input value itself as the categorical ID. Values outside this range will result in default_value if specified, otherwise it will fail.
 * categorical_column_with_vocabulary_file/list
 Use it when you know the set of all possible feature values of a column and there are only a few of them
+
+Question:
+tf.session()
+
 
 ### Wide & Deep learning
 Wide for memorization: seagulls can fly, pigeons can fly
@@ -98,9 +103,6 @@ Type:
 
 You could use bucketization to turn year of birth and income into categorical features, but thr raw conlumns are continuous.
 
-### Overfitting
-Reduce number of nodes or layers
-Dropout or early stopping
 
 
 ### Error measurement
@@ -142,3 +144,29 @@ Natural language API analyses
 * Entity
 * Syntax
 
+
+## Machine learning
+
+### Overfitting
+If our model does much better on the training set than on the test set, then we’re likely overfitting.
+
+Reduce number of nodes or layers
+Dropout or early stopping
+
+
+bias and variance
+
+
+### MapReduce vs Spark
+Spark in memory, fast, 100 times faster than hadoop mapreduce, good for streaming
+* Resilient Distributed Datasets
+* can use disk
+* near real-time analytics
+
+MapReduce
+* Persistent storage
+
+## Question:
+what is TextLineReader - read directly to graph
+bucketized_column - discretizing a continuous variable
+sparse_column_with_keys - encoding categorical data

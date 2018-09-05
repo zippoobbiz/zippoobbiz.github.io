@@ -21,6 +21,27 @@ Use Python or data flow, HBase client, HBase API, BigQuery
 Insert data by creating a mutation
 Requests -> clients -> front-end server -> nodes
 Switching between SSD and HDD storage
+Good for ML continues training
+You can use Cloud Dataproc to create one or more Compute Engine instances that can connect to a Cloud Bigtable instance and run Hadoop jobs. 
+Bigtable tables are sparse; if a cell does not contain any data, it does not take up any space.
+
+Support 4 dimention data model: rowkey, column family, column, timesstamp
+Does this mean Bigtable support SCD?
+
+
+Instance type: Production/Development, difference?
+Prod - minimun 3 nodes
+Dev - one single-node cluster
+0.65/hr per node for both types
+
+### rowKey
+* sorted in a Ascding order
+* unique id
+* can be premitive, structure or array
+* represent internally as byte array
+
+columns can be added on the fly, however the column family cannot
+### Read & write
 
 ### structure
 
@@ -70,3 +91,12 @@ should expect
 
 The number of nodes is linearly related to performance
 make sure the client and BigTable are in the same zone.
+
+### Price
+Pay for the nodes per hour
+and the storage volumne used
+
+### HDD vs SSD
+
+SSD clusters: 2.5 TB per node
+HDD clusters: 8 TB per node

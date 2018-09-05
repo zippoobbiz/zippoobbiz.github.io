@@ -22,9 +22,13 @@ move to GCS:
 * Update file prefix from hfs:// to gs://
 * Use Cloud Dataproc
 
-Can dataproc read data from bigtable? bigquery?(via GCS, and big query connector, The connector to GCS is built into Dataproc)
-standard mode vs high availability mode?
+### Integration with GC storages
+* Can dataproc read data from bigtable? bigquery?(via GCS, and big query connector, The connector to GCS is built into Dataproc)
+* You can use Cloud Dataproc to create one or more Compute Engine instances that can connect to a Cloud Bigtable instance and run Hadoop jobs. After you create your Cloud Dataproc cluster, you can use the cluster to run Hadoop jobs that read and write data to and from Cloud Bigtable.
+* You can use a BigQuery connector to enable programmatic read/write access to BigQuery.
 
+
+standard mode vs high availability mode?
 ### What type of jobs can I run?
 Cloud Dataproc provides out-of-the box and end-to-end support for many of the most popular job types, including Spark, Spark SQL, PySpark, MapReduce, Hive, and Pig jobs.
 
@@ -82,5 +86,10 @@ Map-reduce is a data processing technique used commonly to extract, transform an
 * Persistent disk is used for local caching and not available through HDFS
 * The managed group automatically re-add workers lost due to reclamation
 
-
+### Properties
+Update configuration files:
+```bash
+--properties file_prefix:property=value
+--properties 'spark:spark.master=spark://example.com'
+```
 

@@ -35,7 +35,7 @@ Please just comment below if you found something missing from the exam and good 
 * Load data to GCS: gustil cp
 * K V pare, even it looks like directory.
 * can get access by: REST API, console
-* Transfer service - could be one time, could be recurring
+* Transfer service - could be one time, could be recurring, only into GCS, not out
 * source: locamachine, AWS S3, etc.
 * every bucket belongs to a project.
 * edge cached
@@ -66,6 +66,7 @@ Amazon Glacier may take hours
 * automatic replication
 * fast connection from GCE & GAE etc.
 * Google security
+* Support both compressed and uncompressed SQL dump files
 
 ### {% post_link Cloud-Dataproc Dataproc %}
 * Cluster contains master(s), workers
@@ -99,6 +100,7 @@ Amazon Glacier may take hours
 * Supports ACID Transactions (consistent and durable)
 * SQL like queries
 * Can Update Attributes (or add Attributes which is like the columns and rows)
+* Time consum depends on the size of the result, not the size of the dataset
 
 ### {% post_link BigTable BigTable %}
 * Petabytes
@@ -133,6 +135,8 @@ Can use Python SQL JS to process data
 * Datastudio is stored on google drive
 * dimension X 
 * metrics  Y
+
+* [Cache](https://support.google.com/datastudio/answer/7020039?hl=en): Query cache, Prefetch cache
 
 ### ML
 * gradient descent - walk down an error surface - doesn’t guaranteed to converge
@@ -194,5 +198,13 @@ Vm snapshots are used for backup operation or transfer of data, it’s a copy of
 ### {% post_link Cloud-Dataflow Dataflow %}
 
 ### {% post_link Cloud-Pub-Sub Pub/sub %}
+
+### Hadoop eco mapping to GCP
+Hive -> BigQuery
+HBase -> BigTable
+HBase, Hive, Pig jobs -> can run in Dataproc
+Spark + Pig -> Dataflow
+Kafka -> Pub/sub
+HDFS -> GCS
 
 
