@@ -4,7 +4,7 @@
 
 # Site
 title: Welcome to Phil's
-subtitle: Go Devs (images are missing due to CDN failure, fixing in progress)
+subtitle: Go Devs (images are missing due to CDN failure, fixing in progress!)
 description:
 keywords:
 author: Phil Xu
@@ -76,23 +76,35 @@ pagination_dir: page
 theme: hueman
 
 plugins:
-qiniu:
-  offline: false
-  sync: true
-  bucket: zippoobbiz
-  access_key: cYxVLNErepqOjBmAYGSGFQHutBrfCrYI7d05rsq2
-  secret_key: 6rxrCrq-2vCfQmQguEZd_b9GO_-3UbjY-5RaAB5J
-  dirPrefix:
-  urlPrefix: http://og2api1gp.bkt.clouddn.com
-  local_dir: cdn
-  update_exist: true
-  image:
-    folder: images
-    extend:
-  js:
-    folder: js
-  css:
-    folder: css
+# qiniu:
+#   offline: false
+#   sync: true
+#   bucket: zippoobbiz
+#   access_key: cYxVLNErepqOjBmAYGSGFQHutBrfCrYI7d05rsq2
+#   secret_key: 6rxrCrq-2vCfQmQguEZd_b9GO_-3UbjY-5RaAB5J
+#   dirPrefix:
+#   urlPrefix: http://og2api1gp.bkt.clouddn.com
+#   local_dir: cdn
+#   update_exist: true
+#   image:
+#     folder: images
+#     extend:
+#   js:
+#     folder: js
+#   css:
+#     folder: css
+cdn:
+  enable: true
+  base: 'https://philsblog.b-cdn.net/'
+  tail: v=2019042200000
+  tags:
+    'img[data-orign]':  data-orign
+  exclude:
+    - '*.css'
+    - '*.js'
+    - '*.ejs'
+    - '*.themes'
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
