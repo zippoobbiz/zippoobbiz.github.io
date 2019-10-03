@@ -75,7 +75,7 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: hueman
 
-plugins:
+# plugins:
 # qiniu:
 #   offline: false
 #   sync: true
@@ -93,17 +93,26 @@ plugins:
 #     folder: js
 #   css:
 #     folder: css
-cdn:
-  enable: true
-  base: 'https://philsblog.b-cdn.net/'
-  tail: v=2019042200000
-  tags:
-    'img[data-orign]':  data-orign
-  exclude:
-    - '*.css'
-    - '*.js'
-    - '*.ejs'
-    - '*.themes'
+  # cdn:
+  #   enable: true
+  #   base: 'https://philsblog.b-cdn.net/'
+  #   tail: v=2019042200000
+  # tags:
+  #   'meta[property="og:image"]': 'content'
+  #   'meta[name="twitter:image"]': 'content'
+  # exclude:
+  #   - '**/*.css'
+  #   - '**/*.js'
+  #   - '**/summary.ejs'
+  #   - '**/archive.ejs'
+  #   - '**/counter.ejs'
+  #   - '**/thumbnail.ejs'
+  #   - '**/index.ejs'
+  #   - '**/category.ejs'
+  #   - '**/head.ejs'
+  #   - '**/tag.ejs'
+  #   - '**/scripts.ejs'
+  #   - '**/disqus.ejs'
 
 
 # Deployment
