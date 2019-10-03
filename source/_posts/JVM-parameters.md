@@ -5,7 +5,7 @@ tags: [Java, jvm]
 categories: [Language, Java]
 ---
 
-{% qnimg jvm.png %}
+![jvm](/jvm.png "jvm")
 
 |参数名称|含义|默认值||
 |:-|:-|:-|:-|

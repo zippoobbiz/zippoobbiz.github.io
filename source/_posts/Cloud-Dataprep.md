@@ -5,7 +5,7 @@ tags: [GCP, Dataprep]
 categories: [GCP, Dataprep]
 ---
 
-{% qnimg dataprep.jpg %}
+![dataprep](/dataprep.png "dataprep")
 
 Interactive graphical system for preparing structured or unstructured data for use in:
 analytics -> BigQuery

@@ -5,7 +5,7 @@ tags: [Eclipse, IntelliJ]
 categories: [Tools] 
 ---
 
-{% qnimg EvsIJ.png %}
+![EvsIJ](/EvsIJ.png "EvsIJ")
 
 |**Description**|**Eclipse**|**IntelliJ IDEA**|**VS Code**|
 |:-|:-|:-|:-|

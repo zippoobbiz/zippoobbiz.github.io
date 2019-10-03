@@ -4,7 +4,7 @@ date: 2017-02-24 10:21:04
 tags: [Hibernate, JPA]
 categories: [Framework, Hibernate]
 ---
-{% qnimg hibernate.jpeg %}
+![hibernate](/hibernate.jpeg "hibernate")
 
 Hibernate Session provides createCriteria() method to create a Criteria object
 

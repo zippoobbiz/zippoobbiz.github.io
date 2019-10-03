@@ -5,7 +5,7 @@ tags: [Design Pattern]
 categories: [Theory, Design Pattern]
 ---
 
-{% qnimg design-patterns.png %}
+![design-patterns](/design-patterns.png "design-patterns")
 
 |Design Pattern|Example in JDK|Description
 |:-|:-|:-|

@@ -5,7 +5,7 @@ tags: [Hibernate, JPA]
 categories: [Framework, Hibernate]
 ---
 
-{% qnimg hibernate.jpeg %}
+![hibernate](/hibernate.jpeg "hibernate")
 
 # A mapping example using xml
 ```xml

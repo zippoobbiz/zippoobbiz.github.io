@@ -5,7 +5,7 @@ tags: [GCP, Dataflow]
 categories: [GCP, Dataflow]
 ---
 
-{% qnimg dataflow.jpg %}
+![dataflow](/dataflow.png "dataflow")
 
 Dataflow TextIO.write will shard your file, you can avoid it by withoutSharding()
 

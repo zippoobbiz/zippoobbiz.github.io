@@ -111,4 +111,4 @@ hg export [OPTION]... [-o OUTFILESPEC] [-r] [REV]...
 ```
 Print the changeset header and diffs for one or more revisions. If no revision is given, the parent of the working directory is used.
 
-{% qnimg mercurialhg.png%}
+![mercurialhg](/mercurialhg.png "mercurialhg")

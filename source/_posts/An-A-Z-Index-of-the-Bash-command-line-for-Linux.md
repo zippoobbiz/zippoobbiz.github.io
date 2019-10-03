@@ -4,7 +4,7 @@ date: 2017-06-15 22:16:10
 tags: [Linux, CLI]
 categories: [Tools, Linux]
 ---
-{% qnimg linux_terminal_tw.png %}
+![linux_terminal_tw](/linux_terminal_tw.png "linux_terminal_tw")
 
 |name|Description|
 |----------|:---------|

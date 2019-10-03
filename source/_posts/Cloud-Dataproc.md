@@ -5,7 +5,7 @@ tags: [GCP, Dataproc]
 categories: [GCP, Dataproc]
 ---
 
-{% qnimg gcp.png %}
+![GCP](/gcp.png "GCP")
 
 Dataproc takes care of all the over head and normally take 90 secs to spin up
 Cheep storage Terabytes to Petabytes is good running it on cloud.

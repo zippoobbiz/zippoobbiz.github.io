@@ -113,7 +113,7 @@ Classification: cross-entropy
 For unbalanced dataset
 confusion matrix - to describe the performance 
 
-{% qnimg confusionMatrix.png %}
+![confusionMatrix](/confusionMatrix.png "confusionMatrix")
 
 Accuracy when ML says “cat” —— 991 / 1000 - if balance
 Precision = TP / (FP + FP) —— 1/1 - if unbalanced - accuracy when classifier says yes - things are common

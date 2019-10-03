@@ -5,7 +5,7 @@ tags: [Docker, CLI]
 categories: [Tools, Docker]
 ---
 
-{% qnimg docker.png %}
+![docker](/docker.png "docker")
 
 If you are using a mac, just like a linux, you don't need docker-machine to run docker-engine locally
 

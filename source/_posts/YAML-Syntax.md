@@ -50,4 +50,4 @@ map:
       Y
 ```
 
-{% qnimg gears.jpg %}
+![gears](/gears.png "gears")

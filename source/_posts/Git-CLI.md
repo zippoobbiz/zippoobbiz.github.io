@@ -6,7 +6,7 @@ categories: [Tools, Version Control]
 ---
 
 # Commands Sequence
-{% qnimg git_cycle.png %}
+![git_cycle](/git_cycle.png "git_cycle")
 
 # Git Basics
 |name|Description|

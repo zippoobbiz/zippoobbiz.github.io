@@ -5,7 +5,7 @@ tags: [GCP, BigQuery]
 categories: [GCP, BigQuery]
 ---
 
-{% qnimg bigquery.png %}
+![bigquery](/bigquery.png "bigquery")
 
 ### feature summary
 * Petabyte scale DW on GCP for interactive analysis (near real time analysis, it’s not totally real time, cannot respond in millisecond, microsecond).

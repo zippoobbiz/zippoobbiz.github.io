@@ -128,4 +128,4 @@ $HOME/.bashrc
 # Users environment stuff and startup programs.
 $HOME/.bash_profile		
 ```
-{% qnimg config.jpg %}
+![config](/config.jp "config")

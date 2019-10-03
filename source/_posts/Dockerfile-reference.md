@@ -4,7 +4,7 @@ date: 2017-09-16 09:26:28
 tags: [Docker]
 categories: [Tools, Docker]
 ---
-{% qnimg docker.png %}
+![docker](/docker.png "docker")
 Use Dockerfike create you own docker image.
 
 DockerFile contains

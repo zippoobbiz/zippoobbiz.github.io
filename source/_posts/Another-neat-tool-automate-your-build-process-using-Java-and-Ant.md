@@ -107,4 +107,4 @@ main:
 BUILD SUCCESSFUL
 ```
 
-{% qnimg apacheant.png%}
+![apacheant](/apacheant.png "apacheant")

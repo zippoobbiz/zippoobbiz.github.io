@@ -22,5 +22,5 @@ mainClassName = 'com.mycompany.Main'
 gradle run
 
 ```
-{% qnimg gradle.png %}
+![gradle](/gradle.png "gradle")
 

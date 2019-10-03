@@ -57,4 +57,4 @@ change onwership
 ```bash
 sudo chown -R phillipxu: /usr/local/lib
 ```
-{% qnimg cli.jpg %}
+![cli](/cli.png "cli")

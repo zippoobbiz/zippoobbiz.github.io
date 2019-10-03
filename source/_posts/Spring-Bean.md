@@ -5,7 +5,7 @@ tags: [Spring]
 categories: [Framework, Spring]
 ---
 
-{% qnimg spring.png %}
+![spring](/spring.png "spring")
 
 ## Bean attributes
 
@@ -74,4 +74,3 @@ The scope of bean must be defined. The default scope is singleton
 
 ## Bean lifecycle
 
-{% qnimg beanlife_cycle.jpg%}

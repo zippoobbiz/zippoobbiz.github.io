@@ -5,7 +5,7 @@ tags: [Docker, CLI]
 categories: [Tools, Docker]
 ---
 
-{% qnimg docker.png %}
+![docker](/docker.png "docker")
 
 # Check info
 ```

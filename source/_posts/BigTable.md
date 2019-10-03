@@ -5,7 +5,7 @@ tags: [GCP, BigTable]
 categories: [GCP, BigTable]
 ---
 
-{% qnimg gcp.png %}
+![bigtable](/bigtable.png "bigtable")
 
 ### feature summary
 It's OLAP, so no transaction.

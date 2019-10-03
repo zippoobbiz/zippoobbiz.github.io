@@ -26,7 +26,7 @@ With GraphQL, the server exposes a comprehensive data schema to the client, and 
     * MongoDB
     * Even REST endpoint
 
-{% qnimg grapql.png %}
+![grapql](/grapql.png "grapql")
 
 Here is [tutorial](https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035#.pia6zcwlg) of how to GraphQL Server
 

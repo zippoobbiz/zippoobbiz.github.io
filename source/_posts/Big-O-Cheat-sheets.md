@@ -5,7 +5,7 @@ tags: [Sort, Algorithm, big O]
 categories: [Theory, Algorithm]
 ---
 
-{% qnimg bigOComplexity.jpg %}
+![bigOComplexity](/bigOComplexity.jpg "bigOComplexity")
 
 |Algorithm|Structure|Time:Best|Time:Average|Time:Worst|Space:Worst|
 |:--|:-|:-|:-|:-|:-|

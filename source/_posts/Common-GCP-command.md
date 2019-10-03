@@ -9,6 +9,7 @@ GCP commands:
 # app engine
 gcloud app create
 mvn appengine:deploy
+![GCP](/gcp.png "GCP")
 
 
 # choose project
