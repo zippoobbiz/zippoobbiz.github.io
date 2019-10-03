@@ -22,5 +22,5 @@ mainClassName = 'com.mycompany.Main'
 gradle run
 
 ```
-![gradle](/gradle.png "gradle")
+![gradle](https://philsblog.b-cdn.net/images/gradle.png "gradle")
 

@@ -5,7 +5,7 @@ tags: [GCP, BigTable]
 categories: [GCP, BigTable]
 ---
 
-![bigtable](/bigtable.png "bigtable")
+![bigtable](https://philsblog.b-cdn.net/images/bigtable.png "bigtable")
 
 ### feature summary
 It's OLAP, so no transaction.

@@ -5,7 +5,7 @@ tags: [GCP, Dataprep]
 categories: [GCP, Dataprep]
 ---
 
-![dataprep](/dataprep.png "dataprep")
+![dataprep](https://philsblog.b-cdn.net/images/dataprep.png "dataprep")
 
 Interactive graphical system for preparing structured or unstructured data for use in:
 analytics -> BigQuery

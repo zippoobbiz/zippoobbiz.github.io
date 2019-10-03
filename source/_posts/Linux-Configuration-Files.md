@@ -128,4 +128,4 @@ $HOME/.bashrc
 # Users environment stuff and startup programs.
 $HOME/.bash_profile		
 ```
-![config](/config.jp "config")
+![config](https://philsblog.b-cdn.net/images/config.jp "config")

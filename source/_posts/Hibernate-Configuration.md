@@ -4,11 +4,11 @@ date: 2017-02-18 00:07:41
 tags: [Configuration, Hibernate, JPA]
 categories: [Framework, Hibernate]
 ---
-![hibernate](/hibernate.jpeg "hibernate")
+![hibernate](https://philsblog.b-cdn.net/images/hibernate.jpeg "hibernate")
 > Hibernate ORM (Hibernate in short) is an object-relational mapping tool for the Java programming language. It provides a framework for mapping an object-oriented domain model to a relational database. Hibernate handles object-relational impedance mismatch problems by replacing direct, persistent database accesses with high-level object handling functions.
 
 Diagram
-![hibernate](/hibernate_architecture.jpg "hibernate")
+![hibernate](https://philsblog.b-cdn.net/images/hibernate_architecture.jpg "hibernate")
 
 SessionFactory
 Session

@@ -57,4 +57,4 @@ change onwership
 ```bash
 sudo chown -R phillipxu: /usr/local/lib
 ```
-![cli](/cli.png "cli")
+![cli](https://philsblog.b-cdn.net/images/cli.png "cli")

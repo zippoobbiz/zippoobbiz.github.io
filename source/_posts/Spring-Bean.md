@@ -5,7 +5,7 @@ tags: [Spring]
 categories: [Framework, Spring]
 ---
 
-![spring](/spring.png "spring")
+![spring](https://philsblog.b-cdn.net/images/spring.png "spring")
 
 ## Bean attributes
 

@@ -48,4 +48,4 @@ Bigquery streaming ingestion:
 
 Dataflow running all the time, BigQuery for ad hoc
 
-![pubsub](/pubsub.png "pubsub")
+![pubsub](https://philsblog.b-cdn.net/images/pubsub.png "pubsub")

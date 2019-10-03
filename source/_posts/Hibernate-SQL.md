@@ -5,7 +5,7 @@ tags: [Hibernate, JPA]
 categories: [Framework, Hibernate]
 ---
 
-![hibernate](/hibernate.jpeg "hibernate")
+![hibernate](https://philsblog.b-cdn.net/images/hibernate.jpeg "hibernate")
 
 # Run SQL
 

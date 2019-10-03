@@ -5,7 +5,7 @@ tags: [GCP, GCS, GCE, Cloud SQL, Dataproc, Datastore, BigTable, BigQuery, Datala
 categories: [GCP]
 ---
 
-![GCP](/gcp.png "GCP")
+![GCP](https://philsblog.b-cdn.net/images/gcp.png "GCP")
 
 Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:
 * [Coursera Google Data Engineer courses](https://www.coursera.org/specializations/gcp-data-machine-learning)

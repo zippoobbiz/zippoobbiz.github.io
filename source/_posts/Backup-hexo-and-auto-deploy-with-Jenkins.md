@@ -5,7 +5,7 @@ tags: [Hexo, Git]
 categories: [Tools, Jenkins]
 ---
 
-![hexo](/hexo.png "hexo")
+![hexo](https://philsblog.b-cdn.net/images/hexo.png "hexo")
 Finaly, I am able to update the blog again. I was trying to back up the whole project of the hexo blog and messed up......
 I guess it's easier for you to watch other people's experience rather than do it your self.
 
@@ -30,16 +30,16 @@ So you need a Linux environment with **git npm hexo-cli hexo-server** installed 
 2 run it `java -jar jenkins.war &> somelogs &`
 3 Install all default plugins and also install github intigration(we use this one for webhook, it was called GitHub plugin, however it chaged to github intigration when I install it, who knows what it will be called when you install)
 
-![github-plugin](/github-plugin.jpg "github-plugin")
+![github-plugin](https://philsblog.b-cdn.net/images/github-plugin.jpg "github-plugin")
 
 4 Setup the **build** on jenkins, add your repo, choose the new branch we just created.
 5 Add trigger
 
-![jenkins](/jenkins-trigger.jpeg "jenkins")
+![jenkins](https://philsblog.b-cdn.net/images/jenkins-trigger.jpeg "jenkins")
 
 6 Add Webhook on you github repo(go to that repo's settings)
 
-![github-webhook](/github-webhook.jpeg "github-webhook")
+![github-webhook](https://philsblog.b-cdn.net/images/github-webhook.jpeg "github-webhook")
 
 7 Add the following cmd to your **build**
 ```bash

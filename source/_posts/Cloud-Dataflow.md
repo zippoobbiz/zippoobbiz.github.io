@@ -5,7 +5,7 @@ tags: [GCP, Dataflow]
 categories: [GCP, Dataflow]
 ---
 
-![dataflow](/dataflow.png "dataflow")
+![dataflow](https://philsblog.b-cdn.net/images/dataflow.png "dataflow")
 
 Dataflow TextIO.write will shard your file, you can avoid it by withoutSharding()
 

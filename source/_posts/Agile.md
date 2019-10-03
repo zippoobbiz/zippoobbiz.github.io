@@ -62,7 +62,7 @@ The values/principles make sure that everyone in the team are following the same
 * Daily stand up meeting - what's done, what are you working on, and what help one needs
 * Retrospective -  at the end ot the sprint, the team demonstrates the completed work to the product owner. Discuss whay they can do to improve the process going forward.
 
-![scrum](/scrum.tiff "scrum")
+![scrum](https://philsblog.b-cdn.net/images/scrum.tiff "scrum")
 
 ### The benefits after using Agile:
 * It raises visibility of what was going on. The prioritisation discussions were a lot more clear.

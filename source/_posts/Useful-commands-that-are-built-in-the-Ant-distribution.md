@@ -26,4 +26,4 @@ categories: [Tools, ANT]
 |Tstamp|Sets the DSTAMP, TSTAMP, and TODAY properties in the current project.|
 |Style|Processes a set of documents via XSLT.|
 
-![apacheant](/apacheant.png "apacheant")
+![apacheant](https://philsblog.b-cdn.net/images/apacheant.png "apacheant")

@@ -5,7 +5,7 @@ tags: [Java, jvm]
 categories: [Language, Java]
 ---
 
-![jvm](/jvm.png "jvm")
+![jvm](https://philsblog.b-cdn.net/images/jvm.png "jvm")
 
 |参数名称|含义|默认值||
 |:-|:-|:-|:-|

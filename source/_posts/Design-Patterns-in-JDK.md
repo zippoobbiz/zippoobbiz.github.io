@@ -5,7 +5,7 @@ tags: [Design Pattern]
 categories: [Theory, Design Pattern]
 ---
 
-![design-patterns](/design-patterns.png "design-patterns")
+![design-patterns](https://philsblog.b-cdn.net/images/design-patterns.png "design-patterns")
 
 |Design Pattern|Example in JDK|Description
 |:-|:-|:-|

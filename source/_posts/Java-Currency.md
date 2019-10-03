@@ -8,7 +8,7 @@ categories: [Language, Java]
 
 # Use Thread
 
-![java_multithreading](/java_multithreading.png "java_multithreading")
+![java_multithreading](https://philsblog.b-cdn.net/images/java_multithreading.png "java_multithreading")
 
 There are three ways of using Thread:
 

@@ -5,7 +5,7 @@ tags: [Sort, Algorithm, big O]
 categories: [Theory, Algorithm]
 ---
 
-![bigOComplexity](/bigOComplexity.jpg "bigOComplexity")
+![bigOComplexity](https://philsblog.b-cdn.net/images/bigOComplexity.jpg "bigOComplexity")
 
 |Algorithm|Structure|Time:Best|Time:Average|Time:Worst|Space:Worst|
 |:--|:-|:-|:-|:-|:-|

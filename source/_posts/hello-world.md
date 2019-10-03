@@ -37,4 +37,4 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
-![hello-world](/hello-world.jpg "hello-world")
+![hello-world](https://philsblog.b-cdn.net/images/hello-world.jpg "hello-world")

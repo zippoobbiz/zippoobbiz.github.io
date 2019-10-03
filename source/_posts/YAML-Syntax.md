@@ -50,4 +50,4 @@ map:
       Y
 ```
 
-![gears](/gears.png "gears")
+![gears](https://philsblog.b-cdn.net/images/gears.png "gears")
