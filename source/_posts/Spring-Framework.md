@@ -2,7 +2,7 @@
 title: Spring Framework Intro
 date: 2017-09-02 09:22:08
 tags: [Spring]
-categories: [Framework, Spring]
+categories: [Dev, Spring]
 ---
 
 ![spring](https://philsblog.b-cdn.net/images/spring.png "spring")

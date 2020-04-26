@@ -2,7 +2,7 @@
 title: Backup hexo and auto deploy with Jenkins
 date: 2017-08-21 21:30:38
 tags: [Hexo, Git]
-categories: [Tools, Jenkins]
+categories: [Ops, Jenkins]
 ---
 
 ![hexo](https://philsblog.b-cdn.net/images/hexo.png "hexo")

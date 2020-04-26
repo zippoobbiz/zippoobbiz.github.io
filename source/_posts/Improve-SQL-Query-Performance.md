@@ -2,7 +2,7 @@
 title: Improve SQL Query Performance
 date: 2016-11-03 16:34:46
 tags: [SQL]
-categories: [Tools, SQL]
+categories: [Dev, SQL]
 ---
 
 ![](http://og2api1gp.bkt.clouddn.com/static/images/mysql.png "Optional title")

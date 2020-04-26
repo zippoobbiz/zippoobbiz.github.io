@@ -2,7 +2,7 @@
 title: Java Currency
 date: 2017-01-27 20:31:02
 tags: [Java]
-categories: [Language, Java]
+categories: [Dev, Java]
 ---
 
 

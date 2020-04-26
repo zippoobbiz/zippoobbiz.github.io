@@ -2,7 +2,7 @@
 title: Git CLI
 date: 2017-02-15 20:53:41
 tags: [Version Control, Git]
-categories: [Tools, Version Control]
+categories: [Dev, Version Control]
 ---
 
 # Commands Sequence

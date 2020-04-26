@@ -2,7 +2,7 @@
 title: Mercurial hg CLI
 date: 2016-12-04 16:57:39
 tags: [Version Control, hg, CLI]
-categories: [Tools, Version Control]
+categories: [Dev, Version Control]
 ---
 
 ## Synopsis

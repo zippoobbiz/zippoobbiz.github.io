@@ -2,7 +2,7 @@
 title: JVM parameters
 date: 2017-06-15 23:35:19
 tags: [Java, jvm]
-categories: [Language, Java]
+categories: [Dev, Java]
 ---
 
 ![jvm](https://philsblog.b-cdn.net/images/jvm.png "jvm")

@@ -2,7 +2,7 @@
 title: Java Cache System
 date: 2016-10-13 16:24:59
 tags: [Java, cache]
-categories: [Language, Java]
+categories: [Dev, Java]
 ---
 
 > JCS is a distributed caching system written in Java. It is intended to speed up applications by providing a means to manage cached data of various dynamic natures. Like any caching system, JCS is most useful for high read, low put applications. Latency times drop sharply and bottlenecks move away from the database in an effectively cached system.

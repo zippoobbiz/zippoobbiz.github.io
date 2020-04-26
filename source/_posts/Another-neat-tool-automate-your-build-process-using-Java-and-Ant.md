@@ -2,7 +2,7 @@
 title: Another neat tool -- automate your build process using Java and Ant
 date: 2016-12-03 16:47:06
 tags: [Tools, ANT]
-categories: [Tools, ANT]
+categories: [Dev, ANT]
 ---
 
 > Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of Java applications. — ant.apache.org

@@ -2,7 +2,7 @@
 title: YAML Syntax
 date: 2017-04-16 09:27:47
 tags: [Configuration, YAML]
-categories: [Tools]
+categories: [Dev, YAML]
 ---
 
 # YAML Ain't Markup Language

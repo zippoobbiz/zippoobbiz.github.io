@@ -2,7 +2,7 @@
 title: Docker machine commands
 date: 2017-04-16 21:38:06
 tags: [Docker, CLI]
-categories: [Tools, Docker]
+categories: [Ops, Docker]
 ---
 
 ![docker](https://philsblog.b-cdn.net/images/docker.png "docker")

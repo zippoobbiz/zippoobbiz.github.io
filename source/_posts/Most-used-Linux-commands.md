@@ -2,7 +2,7 @@
 title: Most used Linux commands
 date: 2017-05-13 12:22:32
 tags: [Linux, CLI]
-categories: [Tools, Linux]
+categories: [Ops, Linux]
 ---
 Unzip bz2 keep the original file
 `bzip2 -dk filename.bz2`

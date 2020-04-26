@@ -2,7 +2,7 @@
 title: 'Git vs Mercurial: Why Git? Why Mercurial?'
 date: 2016-12-04 17:01:24
 tags: [Version Control, Git, hg]
-categories: [Tools, Version Control]
+categories: [Dev, Version Control]
 ---
 
 I used to use SVN and Git, never used CVS and never heard about Mercurial. Okay, recently I joined a new company, and they use Mercurial hg, so I read some articles about it. Since Git is very popular nowadays, I would like to compare Mercurial to Git, to find what are different between them, what are the same? And which to choose.

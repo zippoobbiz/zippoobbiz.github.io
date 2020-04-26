@@ -2,7 +2,7 @@
 title: BigTable
 date: 2018-07-02 22:34:22
 tags: [GCP, BigTable]
-categories: [GCP, BigTable]
+categories: [Cloud, GCP, BigTable]
 ---
 
 ![bigtable](https://philsblog.b-cdn.net/images/bigtable.png "bigtable")

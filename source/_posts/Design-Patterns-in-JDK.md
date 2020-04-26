@@ -2,7 +2,7 @@
 title: Design Patterns in JDK
 date: 2018-02-21 22:35:27
 tags: [Design Pattern]
-categories: [Theory, Design Pattern]
+categories: [Dev, Theory, Design Pattern]
 ---
 
 ![design-patterns](https://philsblog.b-cdn.net/images/design-patterns.png "design-patterns")

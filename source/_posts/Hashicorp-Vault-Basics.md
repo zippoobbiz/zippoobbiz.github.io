@@ -2,7 +2,7 @@
 title: Hashicorp Vault Basics
 date: 2019-10-18 14:35:47
 tags: [Hashicorp, Vault]
-categories: [Tools, Vault]
+categories: [Ops, Vault]
 ---
 ![Vault](https://philsblog.b-cdn.net/images/vault.png "Vault")
 

@@ -2,7 +2,7 @@
 title: An A-Z Index of the Bash command line for Linux
 date: 2017-06-15 22:16:10
 tags: [Linux, CLI]
-categories: [Tools, Linux]
+categories: [Ops, Linux]
 ---
 ![linux_terminal_tw](https://philsblog.b-cdn.net/images/linux_terminal_tw.png "linux_terminal_tw")
 

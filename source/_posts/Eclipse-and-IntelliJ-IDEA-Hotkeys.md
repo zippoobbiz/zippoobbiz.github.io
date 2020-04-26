@@ -2,7 +2,7 @@
 title: IDEA Hotkeys
 date: 2017-9-16 09:30:12
 tags: [Eclipse, IntelliJ]
-categories: [Tools] 
+categories: [Ops, Hotkeys] 
 ---
 
 ![EvsIJ](https://philsblog.b-cdn.net/images/EvsIJ.png "EvsIJ")

@@ -2,7 +2,7 @@
 title: Big O Cheat sheets
 date: 2017-08-16 00:15:43
 tags: [Sort, Algorithm, big O]
-categories: [Theory, Algorithm]
+categories: [Dev, Theory, Algorithm]
 ---
 
 ![bigOComplexity](https://philsblog.b-cdn.net/images/bigOComplexity.jpg "bigOComplexity")

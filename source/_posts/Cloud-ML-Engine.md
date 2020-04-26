@@ -2,7 +2,7 @@
 title: Cloud ML Engine & Machine Learning & ML API
 date: 2018-07-04 10:09:54
 tags: [GCP, ML, Cloud ML Engine]
-categories: [GCP, Cloud ML Engine]
+categories: [Cloud, GCP, Cloud ML Engine]
 ---
 
 Use python to run c++

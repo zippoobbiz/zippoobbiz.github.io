@@ -8,7 +8,7 @@ categories: [Work history, 2e Systems GmbH]
 **Java Backend developer**
 Melbourne, VIC 2016 - Present
 
-![2e](https://philsblog.b-cdn.net/images/2e_logo_double.png "2e")
+![](https://philsblog.b-cdn.net/images/2e_logo_double.png "2e")
 
 
 **Description:** 2e Systems is a highly versatile software development company specializing in web, mobile and communications solutions for the airline industry. 

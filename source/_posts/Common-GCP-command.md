@@ -1,7 +1,8 @@
 ---
 title: Common GCP command
 date: 2018-07-18 09:28:59
-tags:
+tags: [GCP]
+categories: [Cloud, GCP, Commands]
 ---
 
 GCP commands:

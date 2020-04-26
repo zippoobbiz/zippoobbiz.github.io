@@ -2,7 +2,7 @@
 title: Cloud Dataflow
 date: 2018-06-30 14:54:28
 tags: [GCP, Dataflow]
-categories: [GCP, Dataflow]
+categories: [Cloud, GCP, Dataflow]
 ---
 
 ![dataflow](https://philsblog.b-cdn.net/images/dataflow.png "dataflow")

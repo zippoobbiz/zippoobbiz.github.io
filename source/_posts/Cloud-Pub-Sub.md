@@ -2,7 +2,7 @@
 title: Cloud Pub/Sub
 date: 2018-06-28 18:14:22
 tags: [GCP, pubsub]
-categories: [GCP, pubsub]
+categories: [Cloud, GCP, pubsub]
 ---
 
 ### feature summary

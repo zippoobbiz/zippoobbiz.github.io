@@ -2,7 +2,7 @@
 title: JasperReport
 date: 2016-11-13 16:20:05
 tags: [Java]
-categories: [Language, Java]
+categories: [Dev, Java]
 ---
 
 

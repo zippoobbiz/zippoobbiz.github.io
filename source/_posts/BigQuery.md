@@ -2,7 +2,7 @@
 title: BigQuery
 date: 2018-07-01 14:24:58
 tags: [GCP, BigQuery]
-categories: [GCP, BigQuery]
+categories: [Cloud, GCP, BigQuery]
 ---
 
 ![bigquery](https://philsblog.b-cdn.net/images/bigquery.png "bigquery")

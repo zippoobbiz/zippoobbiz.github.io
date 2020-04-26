@@ -2,7 +2,7 @@
 title: Hibernate Query
 date: 2017-02-23 15:45:04
 tags: [Hibernate, JPA]
-categories: [Framework, Hibernate]
+categories: [Dev, Hibernate]
 ---
 
 ![hibernate](https://philsblog.b-cdn.net/images/hibernate.jpeg "hibernate")

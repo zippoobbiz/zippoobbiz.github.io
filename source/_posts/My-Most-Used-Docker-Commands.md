@@ -2,7 +2,7 @@
 title: My Most Used Docker Commands
 date: 2017-04-14 19:08:01
 tags: [Docker, CLI]
-categories: [Tools, Docker]
+categories: [Ops, Docker]
 ---
 
 ![docker](https://philsblog.b-cdn.net/images/docker.png "docker")

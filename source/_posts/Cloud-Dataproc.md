@@ -2,7 +2,7 @@
 title: Cloud Dataproc
 date: 2018-07-01 09:06:11
 tags: [GCP, Dataproc]
-categories: [GCP, Dataproc]
+categories: [Cloud, GCP, Dataproc]
 ---
 
 ![GCP](https://philsblog.b-cdn.net/images/gcp.png "GCP")

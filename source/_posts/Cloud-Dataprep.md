@@ -2,7 +2,7 @@
 title: Cloud Dataprep
 date: 2018-06-29 07:52:10
 tags: [GCP, Dataprep]
-categories: [GCP, Dataprep]
+categories: [Cloud, GCP, Dataprep]
 ---
 
 ![dataprep](https://philsblog.b-cdn.net/images/dataprep.png "dataprep")

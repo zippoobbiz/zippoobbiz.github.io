@@ -8,7 +8,7 @@ categories: [Work history, State Grid Fiberlink Inc.]
 **Junior Java Developer**
 Beijing, China, 2011 - 2013
 
-![Alt text](http://og2api1gp.bkt.clouddn.com/static/images/fiberlink.jpeg "Optional title")
+![](https://philsblog.b-cdn.net/images/fiberlink.png "Optional title")
 
 
 **Description:** Smart Home is state-funded home automation system. Consumers could easily connect and control all the household appliances through Smart sockets and their smart phones. It is also convenient to manage the consumption of electrical power and switch the electricity plans through the system.

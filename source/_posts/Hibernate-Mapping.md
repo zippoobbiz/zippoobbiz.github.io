@@ -2,7 +2,7 @@
 title: Hibernate Mapping
 date: 2017-02-22 09:34:09
 tags: [Hibernate, JPA]
-categories: [Framework, Hibernate]
+categories: [Dev, Hibernate]
 ---
 
 ![hibernate](https://philsblog.b-cdn.net/images/hibernate.jpeg "hibernate")

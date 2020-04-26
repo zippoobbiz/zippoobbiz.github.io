@@ -2,7 +2,7 @@
 title: MySQL bottleneck analysis
 date: 2016-11-14 16:29:35
 tags: [Tech, SQL]
-categories: [Tools, SQL]
+categories: [Dev, SQL]
 ---
 
 # Find bottleneck

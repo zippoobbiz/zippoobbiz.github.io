@@ -2,7 +2,7 @@
 title: Agile
 date: 2018-05-14 21:58:25
 tags: [Agile, scrum, kanban]
-categories: [Theory, Methodology]
+categories: [Dev, Theory, Methodology]
 ---
 
 To what I understand about the agile methodology, it's not about whether we stand up or not in the meeting, or what's the name of the roles in the team. It's about two things, the values/principles of agile and the procedures in the cycle.

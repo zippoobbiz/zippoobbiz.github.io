@@ -2,7 +2,7 @@
 title: Useful commands that are built in the Ant distribution
 date: 2016-12-03 16:38:03
 tags: [ANT, TOOLS]
-categories: [Tools, ANT]
+categories: [Dev, ANT]
 ---
 
 ## Here are some commands
