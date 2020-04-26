@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>GCP Data Engineer preparation | Welcome to Phil&#39;s</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="GCP,BigQuery,BigTable,Dataproc,Cloud ML Engine,GCS,GCE,Cloud SQL,Datastore,Datalab,TensorFlow,ML APIs">
+    
+    <meta name="description" content="Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:  Coursera Google Data Engineer courses Udemy courses Google Cloud Pla">
+<meta name="keywords" content="GCP,BigQuery,BigTable,Dataproc,Cloud ML Engine,GCS,GCE,Cloud SQL,Datastore,Datalab,TensorFlow,ML APIs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GCP Data Engineer preparation">
+<meta property="og:url" content="http://www.philsblog.info/2018/06/26/GCP-Fundamentals.html">
+<meta property="og:site_name" content="Welcome to Phil&#39;s">
+<meta property="og:description" content="Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:  Coursera Google Data Engineer courses Udemy courses Google Cloud Pla">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://philsblog.b-cdn.net/images/gcp.png">
+<meta property="og:updated_time" content="2019-10-03T12:41:41.364Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GCP Data Engineer preparation">
+<meta name="twitter:description" content="Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:  Coursera Google Data Engineer courses Udemy courses Google Cloud Pla">
+<meta name="twitter:image" content="https://philsblog.b-cdn.net/images/gcp.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Welcome to Phil&#39;s" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-86825116-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8071091076380273" data-ad-slot="4661656821"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Go Devs (images are missing due to CDN failure, fixing in progress!)</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/">Framework</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/Hibernate/">Hibernate</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/">GCP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/BigQuery/">BigQuery</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/BigTable/">BigTable</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataflow/">Dataflow</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataprep/">Dataprep</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataproc/">Dataproc</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/pubsub/">pubsub</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Language/">Language</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Language/Java/">Java</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/">Theory</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Design-Pattern/">Design Pattern</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Methodology/">Methodology</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/">Tools</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/ANT/">ANT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Docker/">Docker</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Gradle/">Gradle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Jenkins/">Jenkins</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Linux/">Linux</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/SQL/">SQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Version-Control/">Version Control</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/">Work history</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/GCP/">GCP</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-GCP-Fundamentals" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        GCP Data Engineer preparation
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/06/26/GCP-Fundamentals.html" class="article-date">
+            <time datetime="2018-06-26T00:07:07.000Z" itemprop="datePublished">2018-06-26</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/BigQuery/">BigQuery</a>, <a class="tag-link" href="/tags/BigTable/">BigTable</a>, <a class="tag-link" href="/tags/Cloud-ML-Engine/">Cloud ML Engine</a>, <a class="tag-link" href="/tags/Cloud-SQL/">Cloud SQL</a>, <a class="tag-link" href="/tags/Datalab/">Datalab</a>, <a class="tag-link" href="/tags/Dataproc/">Dataproc</a>, <a class="tag-link" href="/tags/Datastore/">Datastore</a>, <a class="tag-link" href="/tags/GCE/">GCE</a>, <a class="tag-link" href="/tags/GCP/">GCP</a>, <a class="tag-link" href="/tags/GCS/">GCS</a>, <a class="tag-link" href="/tags/ML-APIs/">ML APIs</a>, <a class="tag-link" href="/tags/TensorFlow/">TensorFlow</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="https://philsblog.b-cdn.net/images/gcp.png" alt="GCP" title="GCP"></p>
+<p>Here is a summarization of what I have learned so far on GCP data engineering. It includes all of the resources I found, such as:</p>
+<ul>
+<li><a href="https://www.coursera.org/specializations/gcp-data-machine-learning" target="_blank" rel="noopener">Coursera Google Data Engineer courses</a></li>
+<li><a href="https://servian.udemy.com/learn-gcp-become-a-certified-data-engineer-express-course" target="_blank" rel="noopener">Udemy courses</a></li>
+<li><a href="https://cloud.google.com/docs/" target="_blank" rel="noopener">Google Cloud Platform Documentation</a></li>
+<li><a href="https://cloud.google.com/certification/practice-exam/data-engineer" target="_blank" rel="noopener">Sample Exam</a></li>
+<li><a href="https://www.prepaway.com/professional-data-engineer-exam.html" target="_blank" rel="noopener">Google Professional Data Engineer Dumps</a></li>
+</ul>
+<p>I know that you can find everything on Google Cloud Documents, here is a sub set of GCP document for the Data Engineer exam.</p>
+<p>In this page, most of the contents are bullet points. Have a quick look through them, see if you can tell the story behind each of the item. If you can, then you have a pretty good coverage for the GCP Data Engineer Cert. If you haven’t heard of them, don’t worry, you still have time, just google them or go to the sub page to find out more dertails. (There are some internal link which will give you a bit more information of the things summarized in this page.)<br>Please just comment below if you found something missing from the exam and good luck!</p>
+<h3 id="Why-GCP-Why-Cloud"><a href="#Why-GCP-Why-Cloud" class="headerlink" title="Why GCP? Why Cloud?"></a>Why GCP? Why Cloud?</h3><ul>
+<li>MapReduce tends to be limited by the number of compute nodes that you have. Use cloud, you have:</li>
+<li>Grate scalability and reliability</li>
+<li>As no-ops as possible, minimise a system administration overhead</li>
+<li>As flexible as possible</li>
+</ul>
+<h3 id="GCS"><a href="#GCS" class="headerlink" title="GCS"></a>GCS</h3><ul>
+<li>Global scale data and computer infrastrure, Staging area</li>
+<li>BLOB, raw data in any format</li>
+<li>Disk goes away with compute engine, GCS will always be there</li>
+<li>durable, replicated</li>
+<li>can use it to stage the data onto other GCP products</li>
+<li>Load data to GCS: gustil cp</li>
+<li>K V pare, even it looks like directory.</li>
+<li>can get access by: REST API, console</li>
+<li>Transfer service - could be one time, could be recurring, only into GCS, not out</li>
+<li>source: locamachine, AWS S3, etc.</li>
+<li>every bucket belongs to a project.</li>
+<li>edge cached</li>
+<li>Each zone is a physical data center -zone a b and c doesn’t means the geographical zone.- to make sure all your vms are at the same place, do deploy them in the same session</li>
+<li>Highly durable, stores data redundantly, highly available, infinite scalability and consistent. Mainly used for storing binary or object data. Such as images, audio, video and backups.</li>
+<li>Cloud storage offers different products for accessibility and archival.</li>
+<li>Multi-regional - Ideal for content that is required to be served across geographic regions.</li>
+<li>Regional - For use within a single region.</li>
+<li>Nearline - Used for data accessed less than once a month. (Archival solution, you may still be able to retrieve in less then a second)</li>
+<li>Coldline - Used for data access less than once a year (Archival solution, you may still be able to retrieve in less then a second)</li>
+</ul>
+<p>Amazon Glacier may take hours</p>
+<h3 id="Google-Computer-Engine-GCE"><a href="#Google-Computer-Engine-GCE" class="headerlink" title="Google Computer Engine (GCE)"></a>Google Computer Engine (GCE)</h3><ul>
+<li>N1-standard-4</li>
+<li>if only 60% of usage, get 15% discount</li>
+<li>preemptible VM 80% discount (Not sure) others can take it away anytime</li>
+<li>It’s useful when you just want to run an ad hoc function that is not incorporated in to other GCP Paas products.</li>
+<li>An instance can have only one service account.</li>
+</ul>
+<h3 id="Cloud-SQL"><a href="#Cloud-SQL" class="headerlink" title="Cloud SQL"></a>Cloud SQL</h3><ul>
+<li>Single machine</li>
+<li>Handle <strong>gigabytes</strong> of data</li>
+<li>Relational database, support update and deletes individual fields</li>
+<li>Flexible pricing, passivate it when not running, good for testing</li>
+<li>Managed backups by google</li>
+<li>connect from anywhere</li>
+<li>automatic replication</li>
+<li>fast connection from GCE &amp; GAE etc.</li>
+<li>Google security</li>
+<li>Support both compressed and uncompressed SQL dump files</li>
+</ul>
+<h3 id><a href="#" class="headerlink" title></a><a href="/2018/07/01/Cloud-Dataproc.html" title="Dataproc">Dataproc</a></h3><ul>
+<li>Cluster contains master(s), workers</li>
+<li>Resizable</li>
+<li>Think the cluster as a job specific resources.</li>
+<li>Google managed hadoop Pig, Hive, Spark programs</li>
+<li>Hadoop ecosystem</li>
+<li>Spark - interactive SQL</li>
+<li>pig - ETL script</li>
+<li>Hive - do queries</li>
+<li>Presto???</li>
+</ul>
+<h6 id="storage"><a href="#storage" class="headerlink" title="storage"></a>storage</h6><ul>
+<li>Can use HDFS on clusters node.</li>
+<li>Can store data on GCS and use preemptible(probably 10 standard, 30 preemptible) to run your job.(You don’t want to store it on node, because you don’t want to pay the compute when you only need storage) separate the compute and storage. Store it in the save place as the cluster.</li>
+</ul>
+<h3 id="Datastore"><a href="#Datastore" class="headerlink" title="Datastore"></a>Datastore</h3><ul>
+<li>Handle terabytes of data</li>
+<li>HashMap K V pare</li>
+<li>Search by <em>key or property</em></li>
+<li>Transactional</li>
+<li>what is “kind” in datastore???</li>
+<li>Support CRUD operation</li>
+<li><p>hierarchical data</p>
+</li>
+<li><p>Highly scalable and managed NoSQL database. Highly Durable and Available. Supports ACID transactions (which is typical for most SQL data warehouse solutions), SQL-like queries.</p>
+</li>
+<li>Cloud datastore are mainly used for User profiles, such as social network profiles and game statuses.</li>
+<li>Highly Scalable, automatic sharing and replication (Highly Available)</li>
+<li>Supports ACID Transactions (consistent and durable)</li>
+<li>SQL like queries</li>
+<li>Can Update Attributes (or add Attributes which is like the columns and rows)</li>
+<li>Time consum depends on the size of the result, not the size of the dataset</li>
+</ul>
+<h3 id="-1"><a href="#-1" class="headerlink" title></a><a href="/2018/07/02/BigTable.html" title="BigTable">BigTable</a></h3><ul>
+<li>Petabytes</li>
+<li>Support append only operation</li>
+<li>No transactional support</li>
+<li>Always right a new row, append to the table, read the latest data from the table backward, so always get the newest version of the object</li>
+<li>High throughput </li>
+<li>No-ops</li>
+<li>IoT</li>
+<li>flattened data</li>
+<li>Search only based on the rowkey, important to design the good key</li>
+<li>to find the key quickly, avoid hotspot, want it to be distributed.</li>
+<li>Make the table tall and narrow.</li>
+<li>column family, group related columns? but why?????</li>
+</ul>
+<h3 id="-2"><a href="#-2" class="headerlink" title></a><a href="/2018/07/01/BigQuery.html" title="BigQuery">BigQuery</a></h3><ul>
+<li>standard SQL 2011 / lagecy SQL</li>
+<li>user defined function in JS</li>
+<li>Query CSV, JSON, Avro files on GCS or Google sheets without ingestion, called federated data</li>
+<li>You can join data between google sheet and big query, can you join other type of data from GCS？</li>
+<li>Loading data from GCS, can you load from Datastore?</li>
+<li>Can stream data in using dataflow as well.</li>
+</ul>
+<h3 id="Datalab"><a href="#Datalab" class="headerlink" title="Datalab"></a>Datalab</h3><p>python numpy panda<br>Can use Python SQL JS to process data</p>
+<h3 id="DataStudio"><a href="#DataStudio" class="headerlink" title="DataStudio"></a>DataStudio</h3><ul>
+<li>data sources: BigQuery, MySQL, CloudSQL, Google Sheet, Google analytics</li>
+<li>need the right permission</li>
+<li>live update</li>
+<li>Datastudio is stored on google drive</li>
+<li>dimension X </li>
+<li><p>metrics  Y</p>
+</li>
+<li><p><a href="https://support.google.com/datastudio/answer/7020039?hl=en" target="_blank" rel="noopener">Cache</a>: Query cache, Prefetch cache</p>
+</li>
+</ul>
+<h3 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h3><ul>
+<li>gradient descent - walk down an error surface - doesn’t guaranteed to converge</li>
+<li>learning rate - hyper parameter</li>
+<li>epoch - a traversal through the entire training dataset</li>
+<li>Weights - parameters we optimize</li>
+<li>Batch size - the amount of data we compute error on</li>
+<li>Evaluation - is the model good enough? Has to be done on full dataset</li>
+<li>Training - gradient descent + evaluation</li>
+</ul>
+<ul>
+<li>Neurons - one unit of combining inputs</li>
+<li>Hidden layer - set of neutrons that operate on the same set of inputs</li>
+<li>Inputs - What you feed into a neuron</li>
+<li>Features -  transformation of inputs, such as x^2</li>
+<li>Feature Engineering - coming up with what transformations to include</li>
+<li>Softmax - normalize all input probabilities</li>
+</ul>
+<ul>
+<li>Anything in ML model must be numeric</li>
+</ul>
+<h3 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h3><ul>
+<li>Python -&gt; c++</li>
+</ul>
+<h3 id="StackDriver-functions"><a href="#StackDriver-functions" class="headerlink" title="StackDriver functions"></a>StackDriver functions</h3><ul>
+<li>Debugger - allows you to inspect the state of a running application in real time without stopping or slowing it down. You can use it to see your code behavior in production.</li>
+<li>Error reporting - counts, analyzes and aggregates the crashes in your cloud services. You can see the errors in a management interface provided by Stackdriver. You can also receive emails and mobile alerts on new errors.</li>
+<li>Monitoring - provides an overview of performance, uptime and health of your cloud services. It collects metrics, events and metadata from GCP, AWS and other popular open source softwares. It ingests these metrics and displays them via a dashboard.</li>
+<li>Alerting - allows you to create policies to notify you when the health and uptime check results go over a certain limit. For example if uptime of a node is not over 98% alert you. The alerts can be notifications sent to Slack, Campfire, HipChat and PagerDuty.</li>
+<li>Tracing - Trace tracks how requests propagate through your application and receive detailed near real time performance insights. It auto analyses to generate latency reports to show you performance degradations on your VMs. What this means is that if your VM or app slows down tracing will pick this up.</li>
+<li>Logging - Logging allow you to store, search, analyst, monitor and alert on log data and events from GCP. Logging is fully-managed that can scale and ingest logs from thousands of VMs. You can also analyze this in real-time.</li>
+</ul>
+<h3 id="IAM"><a href="#IAM" class="headerlink" title="IAM"></a>IAM</h3><p>Roles:</p>
+<ul>
+<li>predefined</li>
+<li>primitive</li>
+<li>custom</li>
+</ul>
+<p>When you assign both predefined and primitive roles to a user, the permissions granted are a union of each role’s permissions</p>
+<p>Member types :</p>
+<ul>
+<li>Google account (Single person) </li>
+<li><p>Service account (Not a person)<br>  can be used by services and applications running on your Google Compute Engine instance to interact with other Google Cloud Platform APIs<br>  An instance can have only one service account.<br>  Two types of service accounts are available to Compute Engine instances:</p>
+<pre><code>- User-managed service accounts
+ - Google-managed service accounts
+</code></pre></li>
+<li><p>Google Group (Multiple people)</p>
+</li>
+</ul>
+<h3 id="Disk"><a href="#Disk" class="headerlink" title="Disk"></a>Disk</h3><p>Standard persistent disk vs SSD, is standard persistent disk HDD?<br>preemptible instance will self close after running 24 hours<br>Vm snapshots are used for backup operation or transfer of data, it’s a copy of the disk , snapshot already contains the os</p>
+<h3 id="-3"><a href="#-3" class="headerlink" title></a><a href="/2018/06/29/Cloud-Dataprep.html" title="Dataprep">Dataprep</a></h3><h3 id="-4"><a href="#-4" class="headerlink" title></a><a href="/2018/06/30/Cloud-Dataflow.html" title="Dataflow">Dataflow</a></h3><h3 id="-5"><a href="#-5" class="headerlink" title></a><a href="/2018/06/28/Cloud-Pub-Sub.html" title="Pub/sub">Pub/sub</a></h3><h3 id="Hadoop-eco-mapping-to-GCP"><a href="#Hadoop-eco-mapping-to-GCP" class="headerlink" title="Hadoop eco mapping to GCP"></a>Hadoop eco mapping to GCP</h3><p>Hive -&gt; BigQuery<br>HBase -&gt; BigTable<br>HBase, Hive, Pig jobs -&gt; can run in Dataproc<br>Spark + Pig -&gt; Dataflow<br>Kafka -&gt; Pub/sub<br>HDFS -&gt; GCS</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/XiaoduoX" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100009174081848" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/115666960470777778382" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/zippoobbiz" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/phillip-xu/" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/28/Cloud-Pub-Sub.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Cloud Pub/Sub
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/05/20/Gradle-fundamentals.html" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Gradle fundamentals</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/18/Common-GCP-command.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/gcp.png)" alt="Common GCP command" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/07/18/Common-GCP-command.html" class="title">Common GCP command</a></p>
+                            <p class="item-date"><time datetime="2018-07-17T23:28:59.000Z" itemprop="datePublished">2018-07-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/04/Cloud-ML-Engine.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/confusionMatrix.png)" alt="Cloud ML Engine &amp; Machine Learning &amp; ML API" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a></p>
+                            <p class="item-title"><a href="/2018/07/04/Cloud-ML-Engine.html" class="title">Cloud ML Engine &amp; Machine Learning &amp; ML API</a></p>
+                            <p class="item-date"><time datetime="2018-07-04T00:09:54.000Z" itemprop="datePublished">2018-07-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/02/BigTable.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/bigtable.png)" alt="BigTable" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/BigTable/">BigTable</a></p>
+                            <p class="item-title"><a href="/2018/07/02/BigTable.html" class="title">BigTable</a></p>
+                            <p class="item-date"><time datetime="2018-07-02T12:34:22.000Z" itemprop="datePublished">2018-07-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/01/BigQuery.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/bigquery.png)" alt="BigQuery" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/BigQuery/">BigQuery</a></p>
+                            <p class="item-title"><a href="/2018/07/01/BigQuery.html" class="title">BigQuery</a></p>
+                            <p class="item-date"><time datetime="2018-07-01T04:24:58.000Z" itemprop="datePublished">2018-07-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/01/Cloud-Dataproc.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/gcp.png)" alt="Cloud Dataproc" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/Dataproc/">Dataproc</a></p>
+                            <p class="item-title"><a href="/2018/07/01/Cloud-Dataproc.html" class="title">Cloud Dataproc</a></p>
+                            <p class="item-date"><time datetime="2018-06-30T23:06:11.000Z" itemprop="datePublished">2018-07-01</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/">Framework</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/Hibernate/">Hibernate</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/Spring/">Spring</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/">GCP</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/BigQuery/">BigQuery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/BigTable/">BigTable</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataflow/">Dataflow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataprep/">Dataprep</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataproc/">Dataproc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/pubsub/">pubsub</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Language/Java/">Java</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/">Theory</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Design-Pattern/">Design Pattern</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Methodology/">Methodology</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/ANT/">ANT</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Docker/">Docker</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Gradle/">Gradle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Jenkins/">Jenkins</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/SQL/">SQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Version-Control/">Version Control</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/">Work history</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANT/">ANT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BigQuery/">BigQuery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BigTable/">BigTable</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CLI/">CLI</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-ML-Engine/">Cloud ML Engine</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-SQL/">Cloud SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Configuration/">Configuration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataflow/">Dataflow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Datalab/">Datalab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataprep/">Dataprep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataproc/">Dataproc</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Datastore/">Datastore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse/">Eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCE/">GCE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCP/">GCP</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCS/">GCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gradle/">Gradle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML-APIs/">ML APIs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/">Sort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TOOLS/">TOOLS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Version-Control/">Version Control</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-history/">Work history</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/YAML/">YAML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-O/">big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hg/">hg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kanban/">kanban</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pubsub/">pubsub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum/">scrum</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ANT/" style="font-size: 11.67px;">ANT</a> <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/BigQuery/" style="font-size: 11.67px;">BigQuery</a> <a href="/tags/BigTable/" style="font-size: 11.67px;">BigTable</a> <a href="/tags/CLI/" style="font-size: 16.67px;">CLI</a> <a href="/tags/Cloud-ML-Engine/" style="font-size: 11.67px;">Cloud ML Engine</a> <a href="/tags/Cloud-SQL/" style="font-size: 10px;">Cloud SQL</a> <a href="/tags/Configuration/" style="font-size: 11.67px;">Configuration</a> <a href="/tags/Dataflow/" style="font-size: 10px;">Dataflow</a> <a href="/tags/Datalab/" style="font-size: 10px;">Datalab</a> <a href="/tags/Dataprep/" style="font-size: 10px;">Dataprep</a> <a href="/tags/Dataproc/" style="font-size: 11.67px;">Dataproc</a> <a href="/tags/Datastore/" style="font-size: 10px;">Datastore</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Docker/" style="font-size: 13.33px;">Docker</a> <a href="/tags/Eclipse/" style="font-size: 10px;">Eclipse</a> <a href="/tags/GCE/" style="font-size: 10px;">GCE</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/GCS/" style="font-size: 10px;">GCS</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Gradle/" style="font-size: 10px;">Gradle</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 18.33px;">Hibernate</a> <a href="/tags/IntelliJ/" style="font-size: 10px;">IntelliJ</a> <a href="/tags/JPA/" style="font-size: 18.33px;">JPA</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Linux/" style="font-size: 11.67px;">Linux</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/ML-APIs/" style="font-size: 10px;">ML APIs</a> <a href="/tags/SQL/" style="font-size: 11.67px;">SQL</a> <a href="/tags/Sort/" style="font-size: 10px;">Sort</a> <a href="/tags/Spring/" style="font-size: 11.67px;">Spring</a> <a href="/tags/TOOLS/" style="font-size: 10px;">TOOLS</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/Tools/" style="font-size: 13.33px;">Tools</a> <a href="/tags/Version-Control/" style="font-size: 13.33px;">Version Control</a> <a href="/tags/Work-history/" style="font-size: 13.33px;">Work history</a> <a href="/tags/YAML/" style="font-size: 10px;">YAML</a> <a href="/tags/big-O/" style="font-size: 10px;">big O</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/hg/" style="font-size: 11.67px;">hg</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 10px;">kanban</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pubsub/" style="font-size: 10px;">pubsub</a> <a href="/tags/scrum/" style="font-size: 10px;">scrum</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 Phil Xu</p>
+                <!--<p>Powered by <a href="//hexo.io/" target="_blank">NodeJS</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://www.philsblog.info/2018/06/26/GCP-Fundamentals.html';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

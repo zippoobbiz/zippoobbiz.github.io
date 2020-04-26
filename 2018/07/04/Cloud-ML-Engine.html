@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>Cloud ML Engine &amp; Machine Learning &amp; ML API | Welcome to Phil&#39;s</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="GCP,ML,Cloud ML Engine">
+    
+    <meta name="description" content="Use python to run c++ Scale tiers BASIC STANDARD_1 PREMIUM_1 BASIC_GPU BASIC_TPU CUSTOM  On GCP:Collect data  login APIs cloud pub-sub other real-time streaming  Organize data  BigQuery Dataflow Machi">
+<meta name="keywords" content="GCP,ML,Cloud ML Engine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud ML Engine &amp; Machine Learning &amp; ML API">
+<meta property="og:url" content="http://www.philsblog.info/2018/07/04/Cloud-ML-Engine.html">
+<meta property="og:site_name" content="Welcome to Phil&#39;s">
+<meta property="og:description" content="Use python to run c++ Scale tiers BASIC STANDARD_1 PREMIUM_1 BASIC_GPU BASIC_TPU CUSTOM  On GCP:Collect data  login APIs cloud pub-sub other real-time streaming  Organize data  BigQuery Dataflow Machi">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://philsblog.b-cdn.net/images/confusionMatrix.png">
+<meta property="og:updated_time" content="2019-10-03T12:41:41.363Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloud ML Engine &amp; Machine Learning &amp; ML API">
+<meta name="twitter:description" content="Use python to run c++ Scale tiers BASIC STANDARD_1 PREMIUM_1 BASIC_GPU BASIC_TPU CUSTOM  On GCP:Collect data  login APIs cloud pub-sub other real-time streaming  Organize data  BigQuery Dataflow Machi">
+<meta name="twitter:image" content="https://philsblog.b-cdn.net/images/confusionMatrix.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Welcome to Phil&#39;s" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-86825116-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8071091076380273" data-ad-slot="4661656821"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Go Devs (images are missing due to CDN failure, fixing in progress!)</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/">Framework</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/Hibernate/">Hibernate</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Framework/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/">GCP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/BigQuery/">BigQuery</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/BigTable/">BigTable</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataflow/">Dataflow</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataprep/">Dataprep</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/Dataproc/">Dataproc</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/GCP/pubsub/">pubsub</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Language/">Language</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Language/Java/">Java</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/">Theory</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Design-Pattern/">Design Pattern</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Theory/Methodology/">Methodology</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/">Tools</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/ANT/">ANT</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Docker/">Docker</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Gradle/">Gradle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Jenkins/">Jenkins</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Linux/">Linux</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/SQL/">SQL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tools/Version-Control/">Version Control</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/">Work history</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Cloud-ML-Engine" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Cloud ML Engine &amp; Machine Learning &amp; ML API
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/07/04/Cloud-ML-Engine.html" class="article-date">
+            <time datetime="2018-07-04T00:09:54.000Z" itemprop="datePublished">2018-07-04</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Cloud-ML-Engine/">Cloud ML Engine</a>, <a class="tag-link" href="/tags/GCP/">GCP</a>, <a class="tag-link" href="/tags/ML/">ML</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>Use python to run c++</p>
+<h3 id="Scale-tiers"><a href="#Scale-tiers" class="headerlink" title="Scale tiers"></a>Scale tiers</h3><ul>
+<li>BASIC</li>
+<li>STANDARD_1</li>
+<li>PREMIUM_1</li>
+<li>BASIC_GPU</li>
+<li>BASIC_TPU</li>
+<li>CUSTOM</li>
+</ul>
+<p>On GCP:<br>Collect data</p>
+<ul>
+<li>login APIs</li>
+<li>cloud pub-sub</li>
+<li>other real-time streaming</li>
+</ul>
+<p>Organize data</p>
+<ul>
+<li>BigQuery</li>
+<li>Dataflow</li>
+<li>Machine learning processing SDK</li>
+</ul>
+<p>Create model</p>
+<ul>
+<li>Tensorflow</li>
+</ul>
+<p>Train &amp; deploy model</p>
+<ul>
+<li>Cloud engine</li>
+</ul>
+<h3 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h3><ul>
+<li>categorical_column_with_hash_bucket<br>Use it when we don’t know the set of possible values in advance, each possible value in the feature column occupation will be hashed to an integer ID as we encounter them in training.</li>
+<li>categorical_column_with_identity<br>Use this when your inputs are integers in the range [0, num_buckets), and you want to use the input value itself as the categorical ID. Values outside this range will result in default_value if specified, otherwise it will fail.</li>
+<li>categorical_column_with_vocabulary_file/list<br>Use it when you know the set of all possible feature values of a column and there are only a few of them</li>
+</ul>
+<p>Question:<br>tf.session()</p>
+<h3 id="Wide-amp-Deep-learning"><a href="#Wide-amp-Deep-learning" class="headerlink" title="Wide &amp; Deep learning"></a>Wide &amp; Deep learning</h3><p>Wide for memorization: seagulls can fly, pigeons can fly<br>Deep for generalization: animals with wings can fly<br>One can combine the strengths of both.<br>It’s useful for generic large-scale regression and classification problems with sparse inputs (categorical features with a large number of possible feature values), such as recommender systems, search, and ranking problems.</p>
+<h3 id="Run-a-ML-engine-training-job-locally"><a href="#Run-a-ML-engine-training-job-locally" class="headerlink" title="Run a ML engine training job locally"></a>Run a ML engine training job locally</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcloud ml-engine <span class="built_in">local</span> train</span><br></pre></td></tr></table></figure>
+<p>This command runs the specified module in an environment similar to that of a live Cloud ML Engine Training Job.<br>This is especially useful in the case of testing distributed models, as it allows you to validate that you are properly interacting with the Cloud ML Engine cluster configuration.</p>
+<h3 id="Type-of-ML"><a href="#Type-of-ML" class="headerlink" title="Type of ML"></a>Type of ML</h3><p><a href="https://elitedatascience.com/machine-learning-algorithms" target="_blank" rel="noopener">https://elitedatascience.com/machine-learning-algorithms</a></p>
+<ul>
+<li>Regressor<br>Suoervised learning task for modeling and predicting contiunuous, numeric variables. such as prediciting real=estate preices, stock priuces movements or student test scores.</li>
+<li>Classifier<br>Classification is supervised learning task for modeling and predicting categorical variables. Such as predicting employee churn, email spam, financial fraud, or student letter grades.</li>
+<li>Clustering estimator<br>Clustering is an unsupervised learning task for finding natural groupings of observations based on the inherent structure within your dataset. Such as customer segmentation, grouping similar items in e-commerce, and social network analysis.</li>
+</ul>
+<ul>
+<li>Supervised learning vs Unsupervised learning</li>
+<li>test cases with label or not.</li>
+</ul>
+<h3 id="Online-prediction-vs-batch-prediction"><a href="#Online-prediction-vs-batch-prediction" class="headerlink" title="Online prediction vs batch prediction"></a>Online prediction vs batch prediction</h3><ul>
+<li>Online<br>Optimized to minimize the latency of serving predictions.<br>Predictions returned in the reponse message.</li>
+<li>Batch<br>Optimized to handle a high volume of instances in a job and to run more complex models.<br>Predictions written to output files in a Cloud Storage location that you specify.<br><a href="https://cloud.google.com/ml-engine/docs/tensorflow/prediction-overview#online_prediction_versus_batch_prediction" target="_blank" rel="noopener">https://cloud.google.com/ml-engine/docs/tensorflow/prediction-overview#online_prediction_versus_batch_prediction</a></li>
+</ul>
+<h3 id="One-hot-column"><a href="#One-hot-column" class="headerlink" title="One-hot column"></a>One-hot column</h3><p><a href="https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f" target="_blank" rel="noopener">https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f</a></p>
+<h3 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h3><p><a href="https://www.tensorflow.org/programmers_guide/embedding" target="_blank" rel="noopener">https://www.tensorflow.org/programmers_guide/embedding</a></p>
+<h3 id="Hyperparameters"><a href="#Hyperparameters" class="headerlink" title="Hyperparameters"></a>Hyperparameters</h3><p>If model parameters are variables that get adjusted by training with existing data, your hyperparameters are the variables about the training process itself.</p>
+<ul>
+<li>Number of hidden layers</li>
+<li>Number of nodes in each hidden layer</li>
+<li>Learning rate</li>
+</ul>
+<h3 id="Feature-engineering"><a href="#Feature-engineering" class="headerlink" title="Feature engineering"></a>Feature engineering</h3><ul>
+<li>base feature column - one of the raw columns in the original dataframe</li>
+<li>derived feature column - any new columns created based on some transformations defined over one or multiple base columns</li>
+</ul>
+<p>Type:</p>
+<ul>
+<li>Bucketization</li>
+<li>Crossed feature columns</li>
+</ul>
+<p>You could use bucketization to turn year of birth and income into categorical features, but thr raw conlumns are continuous.</p>
+<h3 id="Error-measurement"><a href="#Error-measurement" class="headerlink" title="Error measurement"></a>Error measurement</h3><p>Regression: MSE<br>Classification: cross-entropy</p>
+<h3 id="Performance-evaluation"><a href="#Performance-evaluation" class="headerlink" title="Performance evaluation"></a>Performance evaluation</h3><p>For unbalanced dataset<br>confusion matrix - to describe the performance </p>
+<p><img src="https://philsblog.b-cdn.net/images/confusionMatrix.png" alt="confusionMatrix" title="confusionMatrix"></p>
+<p>Accuracy when ML says “cat” —— 991 / 1000 - if balance<br>Precision = TP / (FP + FP) —— 1/1 - if unbalanced - accuracy when classifier says yes - things are common<br>Recall = TP / (TP + FN) —— 1/10- if unbalanced - Accuracy when the truth is yes - things are rare</p>
+<h3 id="Prepare-the-dataset"><a href="#Prepare-the-dataset" class="headerlink" title="Prepare the dataset:"></a>Prepare the dataset:</h3><p>Good dataset should cover all cases, Ensure to include negative cases<br>But before you throw out the outliers, you need to first see whether if you can collect enough outliers, for some outliers:</p>
+<ul>
+<li>cannot just throw out it</li>
+<li>a better approach: why does this happen?</li>
+<li>reflect something about the data</li>
+<li>You want to make sure enough examples in the training dataset, so should keep it</li>
+<li>the fewer things you throw out, the more robust your model is</li>
+</ul>
+<h3 id="splitting-dataset"><a href="#splitting-dataset" class="headerlink" title="splitting dataset"></a>splitting dataset</h3><p>Original data split into:<br>training data<br>validation data<br>Test data</p>
+<p>cross validation - change the split, take the average, if data is not enough</p>
+<h3 id="ML-APIs"><a href="#ML-APIs" class="headerlink" title="ML APIs"></a>ML APIs</h3><p>Natural language API analyses</p>
+<ul>
+<li>Sentiment</li>
+<li>Category</li>
+<li>Entity</li>
+<li>Syntax</li>
+</ul>
+<h2 id="Machine-learning"><a href="#Machine-learning" class="headerlink" title="Machine learning"></a>Machine learning</h2><h3 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting"></a>Overfitting</h3><p>If our model does much better on the training set than on the test set, then we’re likely overfitting.</p>
+<p>Reduce number of nodes or layers<br>Dropout or early stopping</p>
+<p>bias and variance</p>
+<h3 id="MapReduce-vs-Spark"><a href="#MapReduce-vs-Spark" class="headerlink" title="MapReduce vs Spark"></a>MapReduce vs Spark</h3><p>Spark in memory, fast, 100 times faster than hadoop mapreduce, good for streaming</p>
+<ul>
+<li>Resilient Distributed Datasets</li>
+<li>can use disk</li>
+<li>near real-time analytics</li>
+</ul>
+<p>MapReduce</p>
+<ul>
+<li>Persistent storage</li>
+</ul>
+<h2 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h2><p>what is TextLineReader - read directly to graph<br>bucketized_column - discretizing a continuous variable<br>sparse_column_with_keys - encoding categorical data</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/XiaoduoX" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100009174081848" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/115666960470777778382" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/zippoobbiz" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/phillip-xu/" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/18/Common-GCP-command.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Common GCP command
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/02/BigTable.html" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">BigTable</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/18/Common-GCP-command.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/gcp.png)" alt="Common GCP command" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/07/18/Common-GCP-command.html" class="title">Common GCP command</a></p>
+                            <p class="item-date"><time datetime="2018-07-17T23:28:59.000Z" itemprop="datePublished">2018-07-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/04/Cloud-ML-Engine.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/confusionMatrix.png)" alt="Cloud ML Engine &amp; Machine Learning &amp; ML API" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a></p>
+                            <p class="item-title"><a href="/2018/07/04/Cloud-ML-Engine.html" class="title">Cloud ML Engine &amp; Machine Learning &amp; ML API</a></p>
+                            <p class="item-date"><time datetime="2018-07-04T00:09:54.000Z" itemprop="datePublished">2018-07-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/02/BigTable.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/bigtable.png)" alt="BigTable" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/BigTable/">BigTable</a></p>
+                            <p class="item-title"><a href="/2018/07/02/BigTable.html" class="title">BigTable</a></p>
+                            <p class="item-date"><time datetime="2018-07-02T12:34:22.000Z" itemprop="datePublished">2018-07-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/01/BigQuery.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/bigquery.png)" alt="BigQuery" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/BigQuery/">BigQuery</a></p>
+                            <p class="item-title"><a href="/2018/07/01/BigQuery.html" class="title">BigQuery</a></p>
+                            <p class="item-date"><time datetime="2018-07-01T04:24:58.000Z" itemprop="datePublished">2018-07-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/07/01/Cloud-Dataproc.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://philsblog.b-cdn.net/images/gcp.png)" alt="Cloud Dataproc" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/GCP/">GCP</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/GCP/Dataproc/">Dataproc</a></p>
+                            <p class="item-title"><a href="/2018/07/01/Cloud-Dataproc.html" class="title">Cloud Dataproc</a></p>
+                            <p class="item-date"><time datetime="2018-06-30T23:06:11.000Z" itemprop="datePublished">2018-07-01</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/">Framework</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/Hibernate/">Hibernate</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Framework/Spring/">Spring</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/">GCP</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/BigQuery/">BigQuery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/BigTable/">BigTable</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Cloud-ML-Engine/">Cloud ML Engine</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataflow/">Dataflow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataprep/">Dataprep</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/Dataproc/">Dataproc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GCP/pubsub/">pubsub</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Language/Java/">Java</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/">Theory</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Design-Pattern/">Design Pattern</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Theory/Methodology/">Methodology</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/ANT/">ANT</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Docker/">Docker</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Gradle/">Gradle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Jenkins/">Jenkins</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/SQL/">SQL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/Version-Control/">Version Control</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/">Work history</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/2e-Systems-GmbH/">2e Systems GmbH</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/Financial-Management-Group/">Financial Management Group</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Work-history/State-Grid-Fiberlink-Inc/">State Grid Fiberlink Inc.</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANT/">ANT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BigQuery/">BigQuery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BigTable/">BigTable</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CLI/">CLI</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-ML-Engine/">Cloud ML Engine</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-SQL/">Cloud SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Configuration/">Configuration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataflow/">Dataflow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Datalab/">Datalab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataprep/">Dataprep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dataproc/">Dataproc</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Datastore/">Datastore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse/">Eclipse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCE/">GCE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCP/">GCP</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCS/">GCS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gradle/">Gradle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JPA/">JPA</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML-APIs/">ML APIs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/">Sort</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TOOLS/">TOOLS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tech/">Tech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/">TensorFlow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Version-Control/">Version Control</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-history/">Work history</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/YAML/">YAML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-O/">big O</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hg/">hg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kanban/">kanban</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pubsub/">pubsub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum/">scrum</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ANT/" style="font-size: 11.67px;">ANT</a> <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/BigQuery/" style="font-size: 11.67px;">BigQuery</a> <a href="/tags/BigTable/" style="font-size: 11.67px;">BigTable</a> <a href="/tags/CLI/" style="font-size: 16.67px;">CLI</a> <a href="/tags/Cloud-ML-Engine/" style="font-size: 11.67px;">Cloud ML Engine</a> <a href="/tags/Cloud-SQL/" style="font-size: 10px;">Cloud SQL</a> <a href="/tags/Configuration/" style="font-size: 11.67px;">Configuration</a> <a href="/tags/Dataflow/" style="font-size: 10px;">Dataflow</a> <a href="/tags/Datalab/" style="font-size: 10px;">Datalab</a> <a href="/tags/Dataprep/" style="font-size: 10px;">Dataprep</a> <a href="/tags/Dataproc/" style="font-size: 11.67px;">Dataproc</a> <a href="/tags/Datastore/" style="font-size: 10px;">Datastore</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Docker/" style="font-size: 13.33px;">Docker</a> <a href="/tags/Eclipse/" style="font-size: 10px;">Eclipse</a> <a href="/tags/GCE/" style="font-size: 10px;">GCE</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/GCS/" style="font-size: 10px;">GCS</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Gradle/" style="font-size: 10px;">Gradle</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hibernate/" style="font-size: 18.33px;">Hibernate</a> <a href="/tags/IntelliJ/" style="font-size: 10px;">IntelliJ</a> <a href="/tags/JPA/" style="font-size: 18.33px;">JPA</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Linux/" style="font-size: 11.67px;">Linux</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/ML-APIs/" style="font-size: 10px;">ML APIs</a> <a href="/tags/SQL/" style="font-size: 11.67px;">SQL</a> <a href="/tags/Sort/" style="font-size: 10px;">Sort</a> <a href="/tags/Spring/" style="font-size: 11.67px;">Spring</a> <a href="/tags/TOOLS/" style="font-size: 10px;">TOOLS</a> <a href="/tags/Tech/" style="font-size: 10px;">Tech</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/Tools/" style="font-size: 13.33px;">Tools</a> <a href="/tags/Version-Control/" style="font-size: 13.33px;">Version Control</a> <a href="/tags/Work-history/" style="font-size: 13.33px;">Work history</a> <a href="/tags/YAML/" style="font-size: 10px;">YAML</a> <a href="/tags/big-O/" style="font-size: 10px;">big O</a> <a href="/tags/cache/" style="font-size: 10px;">cache</a> <a href="/tags/hg/" style="font-size: 11.67px;">hg</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 10px;">kanban</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/pubsub/" style="font-size: 10px;">pubsub</a> <a href="/tags/scrum/" style="font-size: 10px;">scrum</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 Phil Xu</p>
+                <!--<p>Powered by <a href="//hexo.io/" target="_blank">NodeJS</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://www.philsblog.info/2018/07/04/Cloud-ML-Engine.html';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
