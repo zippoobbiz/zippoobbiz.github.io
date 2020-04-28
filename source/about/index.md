@@ -8,19 +8,15 @@ Dear friend,
   If you’re reading this, you know me from somewhere. 
 And if you've come this far, maybe you're willing to come a little further.
 
-I am a Developer, prefer but not limit to use Java language, having 4+ years of programming experience.
-I am not just a Programmer, I'd love to solve problems, find answers, and learn new skills!
-I am passionate about my career, and wish devoute the next decade to this industry.
+I am a believer of cloud computing and pipeline automation, a quick learner of any Tech-stack on demand, with many years of experience in the IT industry. Passionate about career development with a can do attitude.
 
+Check the following links to find out more about my work history.
 
-You can click the tab above or the link below to know more about my work history, find out what I designed and created in the past few years!
-
+* {% post_link Rakuten-Mobile Servian Pty Ltd / Rakuten Mobile %}
+* {% post_link ANZ-Insto Servian Pty Ltd / ANZ %}
 * {% post_link 2e-Systems-GmbH 2e Systems %}
 * {% post_link Financial-Management-Group Financial Management Group %}
 * {% post_link State-Grid-Fiberlink-Corporation State Grid Fiberlink Inc. %}
-* Servian Pty Ltd
-
-** Here, let’s see some specific material!!!!! My skill list! **
 
 |Skill|detail|
 |:--|:--|
@@ -39,13 +35,6 @@ You can click the tab above or the link below to know more about my work history
 |IDE|Eclipse<br/>IntelliJ IDEA<br/>NetBeans|
 |Config|XML JSON YAML|
 
-I believe cloud & data are the future!!! and I am currently focusing on GCP data engineering, wish to get the cert soon.
-Feel free to talk to me if we share the same interests.
-
-Cheers,
-Phillip
-
-P.S. To know more about me, probably you want to visit my linkedin.
 {% raw %}
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="phillip-xu"><a class="LI-simple-link" href='https://au.linkedin.com/in/phillip-xu?trk=profile-badge'>Phillip xu</a></div>
