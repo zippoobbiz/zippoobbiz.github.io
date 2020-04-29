@@ -8,7 +8,7 @@ categories: [Work history, Servian/Rakuten Mobile]
 **Architect & Automation Engineer**
 Melbourne, Australia, 2019 - 2020
 
-![](https://philsblog.b-cdn.net/images/rakutenmobile.png "Optional title")
+![](https://philsblog.b-cdn.net/images/rakuten_mobile.jpeg "Optional title")
 
 
 **Description:** Building and configuring security management solution on RedHat Enterprise Linux server in OpenStack.
