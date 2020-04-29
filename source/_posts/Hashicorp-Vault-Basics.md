@@ -17,7 +17,7 @@ There is a existing module provided
 Follow the instruction of this module, there are some minor issues though, not sure if it is fixed or not, I will provide how I install it here.
 
 1. add the following module to your main.tf
-```
+```bash
 module "vault" {
   source         = "terraform-google-modules/vault/google"
   project_id     = var.project_id
@@ -33,44 +33,44 @@ output "vault_addr" {
 
 2. tf apply
 3. export these two variable which will be picked up by **vault**, the name of the output should match the one defined in your main.tf
-```
+```bash
 $ export VAULT_ADDR="$(terraform output vault_address)"
 $ export VAULT_CACERT="$(pwd)/ca.crt"
 ```
 
 4. init your cluster, it basically shard a key into 5 pieces, to unseal the vault, you will need at least provide any 3 of the 5. Change the number to your liking, the default recommendation are 5 and 3. It will also generate the root token along with the unseal key. Save then somewhere safe.
-```
+```bash
 $ vault operator init \
     -recovery-shares 5 \
     -recovery-threshold 3
 ```
 
 # Most used commands
-```
+```bash
 vault operator init -recovery-shares 5 -recovery-threshold 3
 ```
-```
+```bash
 vault login
 ```
-```
+```bash
 vault audit enable file file_path=/var/log/vault/audit.log
 ```
-```
+```bash
 vault secrets list -detailed
 ```
-```
+```bash
 vault secrets enable -path=secret secret
 vault secrets enable -path=secret/ kv
 vault secrets enable kv-v2
 vault secrets enable -path=secret/ -version=2 kv
 ```
-```
+```bash
 vault kv enable-versioning secret/
 ```
-```
+```bash
 vault secrets list -detailed
 ```
-```
+```bash
 vault kv put secret/hello foo=world
 vault kv put secret/apikey/splunk apikey="xxxxxx"
 # $cat acme.json{
@@ -82,29 +82,29 @@ vault kv put secret/apikey/splunk apikey="xxxxxx"
 vault kv put secret/customer.acme @acme.json
 vault kv get -field=contact_email secret/customer/acme
 ```
-```
+```bash
 vault kv put secret/customer/acme contact_email="jennifer@acme.com"
 ```
 put is a replacement, it's not a merge. All the data will be overwriten after put, e.g. in the above json example, organization and region are lost if doing put
 it also keeps a different version
-```
+```bash
 vault kv patch secret/customer/acme contact_email="jennifer@acme.com"
 ```
 just update one field in the secret, use patch. No patch equivlant api yet, it is a wrap of many other command, do the hard work for you.
-```
+```bash
 vault kv delete secret/apikey/splunk
 ```
 if using version 1, then it is deleted, if usinv version 2, then the secrets are just marked as deleted.
 if you want to really delete the secret in version 2, do a destroy
-```
+```bash
 vault kv destroy secret/apikey/splunk
 ```
-```
+```bash
 vault kv etadata delete secret/apikey/splunk
 
 ```
 example of using apis
-```
+```bash
 $curl --header "X-Vault-Token:<tken>" \
       --request POST \ 
       --data '{ "apikey": "3230falksj2jsd" }'
@@ -126,19 +126,19 @@ $curl --header "X-Vault-Token:<tken>" \
 CHeck and set, only for kv-v2
 tell the engine, alert the user when changing the secret
 enable it on the secret engine mounted at secret
-```
+```bash
 vault write secret/config cas-required=true
 ```
 enable it only on the secret/partner path
-```
+```bash
 vault kv metadata put -cas-required=true secret/partner
 ```
 when check and set is enabled, every write operation requres cas value, set the cas to 0 if the write should be allowed only if the key does not exist. Otherwise, set it to the current versin number.
-```
+```bash
 vault kv put -cas=3 secret/apikey admin-key="fasjdfslkjf"
 ```
 UI is actually nicer if you want to do versioning, in UI, you can create a new version based on a seleceted history version.
-```
+```bash
 vault kv get secret/hello
 ```
 
